@@ -11,10 +11,10 @@ export default function TrustStrip() {
           <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] tracking-[-0.02em] text-deep md:text-[40px]">
             방역은 빠르게,
             <br />
-            증명은 분명하게.
+            진단은 정확하게.
           </h2>
           <p className="mt-4 text-[16px] leading-[1.8] text-body3">
-            한국방역환경은 감염병 예방 및 관리 법정교육 이수 기반으로 현장별 방역 계획을 세웁니다.
+            한국방역환경은 감염병 예방 및 관리 법정교육 이수를 바탕으로 현장별 방역 계획을 세웁니다.
             강진 지역의 가정, 매장, 창고, 공공시설까지 목적에 맞는 관리를 제공합니다.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-3">
@@ -52,16 +52,16 @@ export default function TrustStrip() {
           <div className="overflow-hidden rounded-[8px] border border-hairline bg-white shadow-xl shadow-deep/5 sm:translate-y-8">
             <div className="relative aspect-[4/5]">
               <Image
-                src="/images/home/service-flyer.png"
-                alt="한국방역환경 해충 박멸 및 방역 소독 안내 자료"
+                src="/images/home/inspection-checklist.png"
+                alt="방역 현장 체크리스트 진단 이미지"
                 fill
                 sizes="(min-width: 768px) 320px, 45vw"
-                className="object-cover object-[50%_42%]"
+                className="object-cover object-[62%_50%]"
               />
             </div>
             <div className="p-4">
-              <p className="text-[13px] font-bold text-primary">현장 서비스</p>
-              <p className="mt-1 text-[15px] font-extrabold text-deep">바퀴벌레, 쥐, 소독, 물탱크 청소</p>
+              <p className="text-[13px] font-bold text-primary">현장 진단</p>
+              <p className="mt-1 text-[15px] font-extrabold text-deep">공간별 문제 원인 확인</p>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ export default function ColumnTeaser() {
       <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[270px_1fr] lg:items-center">
         <div>
           <h2 className="text-[31px] font-extrabold leading-[1.25] tracking-[-0.02em] text-deep md:text-[42px]">
-            매거진
+            칼럼
             <br />
             해충없이 사는 법부터
             <br />
@@ -23,7 +23,7 @@ export default function ColumnTeaser() {
               key={c.title}
               className="flex aspect-square flex-col items-center justify-center rounded-full border-2 border-primary bg-white px-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
             >
-              <p className="text-[12px] font-extrabold text-primary">HBE MAGAZINE Vol.0{index + 1}</p>
+              <p className="text-[12px] font-extrabold text-primary">HBE COLUMN Vol.0{index + 1}</p>
               <h3 className="mt-5 text-[18px] font-extrabold leading-[1.45] text-deep">{c.title}</h3>
               <span className="mt-5 h-[8px] w-[72%] bg-primary/16" />
             </article>

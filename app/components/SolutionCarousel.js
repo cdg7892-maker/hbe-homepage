@@ -6,6 +6,16 @@ import Link from "next/link"
 import { SERVICES_DATA } from "../lib/services-data"
 import { ICONS } from "../lib/icons"
 
+const serviceImages = {
+  roach: "/images/home/hero-sanitation-tech.png",
+  rat: "/images/home/inspection-checklist.png",
+  "flying-insect": "/images/home/hero-sanitation-tech.png",
+  disinfection: "/images/home/inspection-checklist.png",
+  "air-quality": "/images/home/hero-sanitation-tech.png",
+  mattress: "/images/home/home-bedroom-inspection.png",
+  "water-tank": "/images/home/water-tank-inspection.png",
+}
+
 export default function SolutionCarousel() {
   const scrollRef = useRef(null)
 
@@ -42,32 +52,31 @@ export default function SolutionCarousel() {
           {SERVICES_DATA.map((s, index) => {
             const Icon = ICONS[s.icon]
             const featured = index === 0
+            const imageSrc = serviceImages[s.slug] || "/images/home/hero-sanitation-tech.png"
             return (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className={`relative min-h-[270px] w-[250px] shrink-0 snap-start overflow-hidden rounded-[48px_8px_48px_8px] border-2 p-7 transition hover:-translate-y-1 md:w-[280px] ${
-                  featured ? "border-primary bg-primary text-white shadow-2xl shadow-primary/25" : "border-primary bg-white text-deep"
+                className={`relative min-h-[330px] w-[270px] shrink-0 snap-start overflow-hidden rounded-[48px_8px_48px_8px] border-2 bg-white transition hover:-translate-y-1 md:w-[300px] ${
+                  featured ? "border-primary shadow-2xl shadow-primary/20" : "border-primary/80"
                 }`}
               >
-                {featured && (
-                  <>
-                    <Image
-                      src="/images/home/hero-sanitation-tech.png"
-                      alt=""
-                      fill
-                      sizes="280px"
-                      className="object-cover opacity-25"
-                    />
-                    <div className="absolute inset-0 bg-primary/78" />
-                  </>
-                )}
-                <div className="relative">
-                  <span className={`mb-10 flex h-13 w-13 items-center justify-center rounded-[8px] ${featured ? "bg-white/15" : "bg-tint text-primary"}`}>
+                <div className="relative h-36 overflow-hidden">
+                  <Image
+                    src={imageSrc}
+                    alt={`${s.title} 서비스 이미지`}
+                    fill
+                    sizes="300px"
+                    className="object-cover"
+                  />
+                  <div className={`absolute inset-0 ${featured ? "bg-primary/62" : "bg-deep/18"}`} />
+                </div>
+                <div className="p-7">
+                  <span className={`mb-6 flex h-13 w-13 items-center justify-center rounded-[8px] ${featured ? "bg-primary text-white" : "bg-tint text-primary"}`}>
                     {Icon && <Icon size={26} strokeWidth={1.8} aria-hidden="true" />}
                   </span>
-                  <h3 className={`text-[22px] font-extrabold leading-snug ${featured ? "text-white" : "text-primary"}`}>{s.title}</h3>
-                  <p className={`mt-4 text-[14px] leading-relaxed ${featured ? "text-white/82" : "text-body3"}`}>{s.shortDesc}</p>
+                  <h3 className="text-[22px] font-extrabold leading-snug text-primary">{s.title}</h3>
+                  <p className="mt-4 text-[14px] leading-relaxed text-body3">{s.shortDesc}</p>
                 </div>
               </Link>
             )

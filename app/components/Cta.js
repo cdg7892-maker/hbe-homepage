@@ -13,8 +13,8 @@ export default function Cta() {
           바퀴벌레, 쥐, 소독, 물탱크 청소까지 한국방역환경이 현장에 맞는 답을 안내합니다.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href={SITE.mobileHref} className="btn-signature btn-primary px-7 py-4 text-base font-extrabold">
-            전화 상담 {SITE.mobileDisplay}
+          <a href={SITE.phoneHref} className="btn-signature btn-primary px-7 py-4 text-base font-extrabold">
+            전화 상담 {SITE.phoneDisplay}
           </a>
           <a href="/contact" className="btn-signature border border-hairline-soft2 bg-white px-7 py-4 text-base font-bold text-deep transition hover:bg-tint">
             온라인 문의
