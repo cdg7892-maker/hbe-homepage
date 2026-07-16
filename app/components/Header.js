@@ -1,11 +1,20 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { SITE, NAV_ITEMS } from "../lib/site"
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (!open) return
+    function onKeyDown(e) {
+      if (e.key === "Escape") setOpen(false)
+    }
+    document.addEventListener("keydown", onKeyDown)
+    return () => document.removeEventListener("keydown", onKeyDown)
+  }, [open])
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-hairline">
@@ -19,7 +28,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-9 text-[14.5px] font-semibold text-body">
+        <nav aria-label="주요 메뉴" className="hidden md:flex items-center gap-9 text-[14.5px] font-semibold text-body">
           {NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} className="hover:text-deep transition-colors">
               {item.label}
@@ -37,8 +46,9 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label="메뉴 열기"
+            aria-label={open ? "메뉴 닫기" : "메뉴 열기"}
             aria-expanded={open}
+            aria-controls="mobile-nav"
             className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px]"
           >
             <span className={`block w-5 h-[2px] bg-deep transition-transform ${open ? "translate-y-[7px] rotate-45" : ""}`} />
@@ -49,7 +59,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-hairline bg-white px-5 py-4 flex flex-col gap-1">
+        <nav id="mobile-nav" aria-label="모바일 메뉴" className="md:hidden border-t border-hairline bg-white px-5 py-4 flex flex-col gap-1">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
@@ -66,7 +76,7 @@ export default function Header() {
           >
             📞 {SITE.phoneDisplay}
           </a>
-        </div>
+        </nav>
       )}
     </header>
   )

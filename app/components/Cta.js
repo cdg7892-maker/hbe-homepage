@@ -6,7 +6,7 @@ export default function Cta() {
       <h2 className="text-[22px] md:text-[26px] font-extrabold text-deep tracking-[-0.02em]">
         지금 전화 한 통이면 충분해요
       </h2>
-      <p className="text-[15px] text-[#5a6a5e] mt-2.5 mb-7">
+      <p className="text-[15px] text-body3 mt-2.5 mb-7">
         당일 방문 상담도 가능합니다. 편하게 연락주세요.
       </p>
       <div className="flex flex-wrap gap-3 justify-center">
@@ -18,7 +18,7 @@ export default function Cta() {
         </a>
         <a
           href="/contact"
-          className="border border-[#cfd8d1] text-deep font-semibold text-base px-7 py-4 rounded-full hover:bg-white transition"
+          className="border border-hairline-soft2 text-deep font-semibold text-base px-7 py-4 rounded-full hover:bg-white transition"
         >
           온라인 문의하기
         </a>

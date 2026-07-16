@@ -8,7 +8,7 @@ export default function Testimonial() {
             "repeating-linear-gradient(45deg,#f4f5ee,#f4f5ee 14px,#ecefe3 14px,#ecefe3 28px)",
         }}
       >
-        <span className="text-[#a3a08c] text-[13px] font-mono leading-relaxed">
+        <span className="text-placeholder-text text-[13px] font-mono leading-relaxed">
           고객 후기 사진
           <br />
           placeholder

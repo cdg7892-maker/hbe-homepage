@@ -7,13 +7,21 @@
   --color-tint2: #eef5f0;
   --color-offwhite: #fdfcf8;
   --color-hairline: #f0ede2;
+  --color-hairline-soft: #e2dfd0;
+  --color-hairline-soft2: #cfd8d1;
   --color-body: #7a8177;
   --color-body2: #8a8f83;
+  --color-body3: #5a6a5e;
+  --color-btn-outline-text: #5a5f52;
   --color-badge-bg: #fbf1d6;
   --color-badge-text: #a2802e;
+  --color-on-primary-muted: #e4f0e8;
+  --color-placeholder-text: #a3a08c;
   --color-footer-text: #c3cfc7;
   --color-footer-copy: #8fa093;
-  --font-sans: "Pretendard", system-ui, sans-serif;
+  --font-sans: var(--font-pretendard), system-ui, sans-serif;
+  --radius-card: 20px;
+  --radius-image: 24px;
 }
 
 html {
@@ -30,4 +38,24 @@ body {
 
 a {
   color: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--color-deep);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }

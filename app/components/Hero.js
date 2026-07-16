@@ -26,7 +26,7 @@ export default function Hero() {
           </a>
           <a
             href="#services"
-            className="border border-[#e2dfd0] text-[#5a5f52] font-semibold text-[15.5px] px-[26px] py-[15px] rounded-full hover:bg-white transition"
+            className="border border-hairline-soft text-btn-outline-text font-semibold text-[15.5px] px-[26px] py-[15px] rounded-full hover:bg-white transition"
           >
             서비스 둘러보기
           </a>
@@ -39,7 +39,7 @@ export default function Hero() {
             "repeating-linear-gradient(135deg,#f3f1e7,#f3f1e7 14px,#ece9db 14px,#ece9db 28px)",
         }}
       >
-        <span className="text-[#a3a08c] text-[13px] font-mono leading-relaxed">
+        <span className="text-placeholder-text text-[13px] font-mono leading-relaxed">
           직원 출동 사진
           <br />
           placeholder — 1000×800

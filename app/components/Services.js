@@ -1,4 +1,6 @@
-import { SERVICES, SITE } from "../lib/site"
+import { SITE } from "../lib/site"
+import { SERVICES_DATA } from "../lib/services-data"
+import ServiceCard from "./ServiceCard"
 
 export default function Services() {
   return (
@@ -12,21 +14,12 @@ export default function Services() {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {SERVICES.map((s) => (
-          <div
-            key={s.title}
-            className="bg-white border border-hairline rounded-[20px] px-[22px] py-7 flex flex-col gap-3.5"
-          >
-            <div className="w-11 h-11 rounded-full bg-tint text-primary font-extrabold text-base flex items-center justify-center">
-              {s.initial}
-            </div>
-            <div className="text-[16.5px] font-bold text-deep">{s.title}</div>
-            <div className="text-[13.5px] leading-relaxed text-body2">{s.desc}</div>
-          </div>
+        {SERVICES_DATA.map((s) => (
+          <ServiceCard key={s.slug} service={s} />
         ))}
         <div className="bg-primary rounded-[20px] px-[22px] py-7 flex flex-col justify-center gap-2.5">
           <div className="text-[15.5px] font-bold text-white">어떤 서비스가 필요한지 모르겠다면?</div>
-          <div className="text-[13px] leading-relaxed text-[#e4f0e8]">
+          <div className="text-[13px] leading-relaxed text-on-primary-muted">
             전화 한 통이면 딱 맞는 서비스를 안내해드려요.
           </div>
           <a
