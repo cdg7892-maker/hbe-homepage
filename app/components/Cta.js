@@ -2,27 +2,22 @@ import { SITE } from "../lib/site"
 
 export default function Cta() {
   return (
-    <section className="relative overflow-hidden bg-tint2 px-5 md:px-14 py-14 md:py-[64px] text-center">
-      <div className="blob-decoration w-[300px] h-[300px] bg-primary/10 -top-20 left-1/4" />
-      <div className="relative">
-        <h2 className="text-[22px] md:text-[26px] font-extrabold text-deep tracking-[-0.02em]">
-          지금 전화 한 통이면 충분해요
+    <section className="bg-[#f7faf7] px-5 py-16 text-center md:px-14 md:py-20">
+      <div className="mx-auto max-w-[760px]">
+        <h2 className="text-[26px] font-extrabold tracking-[-0.02em] text-deep md:text-[36px]">
+          방치하지 마세요.
+          <br />
+          빠른 진단이 비용과 시간을 줄입니다.
         </h2>
-        <p className="text-[15px] text-body3 mt-2.5 mb-7">
-          당일 방문 상담도 가능합니다. 편하게 연락주세요.
+        <p className="mt-4 text-[16px] leading-[1.75] text-body3">
+          바퀴벌레, 쥐, 소독, 물탱크 청소까지 한국방역환경이 현장에 맞는 답을 안내합니다.
         </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <a
-            href={SITE.phoneHref}
-            className="btn-signature btn-primary font-bold text-base px-7 py-4"
-          >
-            📞 전화상담 {SITE.phoneDisplay}
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <a href={SITE.mobileHref} className="btn-signature btn-primary px-7 py-4 text-base font-extrabold">
+            전화 상담 {SITE.mobileDisplay}
           </a>
-          <a
-            href="/contact"
-            className="btn-signature border border-hairline-soft2 text-deep font-semibold text-base px-7 py-4 hover:bg-white transition"
-          >
-            온라인 문의하기
+          <a href="/contact" className="btn-signature border border-hairline-soft2 bg-white px-7 py-4 text-base font-bold text-deep transition hover:bg-tint">
+            온라인 문의
           </a>
         </div>
       </div>

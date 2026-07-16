@@ -3,21 +3,25 @@ import { REVIEWS_DATA } from "../lib/reviews-data"
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-offwhite px-5 md:px-14 py-16 md:py-20">
-      <div className="text-center mb-10">
-        <span className="text-primary text-[13px] font-extrabold tracking-[0.08em] uppercase">Reviews</span>
-        <h2 className="text-[24px] md:text-[30px] font-extrabold text-deep tracking-[-0.02em] mt-2">이용후기</h2>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-[960px] mx-auto">
-        {REVIEWS_DATA.map((r, i) => (
-          <div key={i} className="card-elevated bg-white border border-hairline rounded-2xl p-7 flex flex-col gap-4">
-            <span className="w-10 h-10 rounded-full bg-tint text-primary flex items-center justify-center">
-              <ICONS.Quote size={18} strokeWidth={2} aria-hidden="true" />
-            </span>
-            <p className="text-[15.5px] font-bold text-deep leading-relaxed">&ldquo;{r.quote}&rdquo;</p>
-            <p className="text-[13px] font-semibold text-body2 mt-auto">— {r.author}</p>
-          </div>
-        ))}
+    <section className="bg-deep px-5 py-16 text-white md:px-14 md:py-20">
+      <div className="mx-auto max-w-[1180px]">
+        <div className="mb-9">
+          <span className="text-[13px] font-extrabold uppercase tracking-[0.08em] text-white/55">Reviews</span>
+          <h2 className="mt-2 text-[26px] font-extrabold tracking-[-0.02em] md:text-[36px]">
+            현장에서 신뢰를 쌓는 방식
+          </h2>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {REVIEWS_DATA.map((r) => (
+            <article key={r.author} className="rounded-[8px] border border-white/12 bg-white/8 p-6">
+              <span className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-white/12">
+                <ICONS.Quote size={18} strokeWidth={2} aria-hidden="true" />
+              </span>
+              <p className="mt-5 text-[16px] font-bold leading-relaxed">&ldquo;{r.quote}&rdquo;</p>
+              <p className="mt-6 text-[13px] font-semibold text-white/55">{r.author}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

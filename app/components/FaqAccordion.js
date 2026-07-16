@@ -6,7 +6,7 @@ export default function FaqAccordion({ items }) {
       {items.map((item, i) => (
         <details
           key={i}
-          className="bg-white border border-hairline rounded-2xl px-5 py-4 group"
+          className="group rounded-[8px] border border-hairline bg-white px-5 py-4"
         >
           <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-semibold text-[15px] text-deep">
             <span>{item.q}</span>

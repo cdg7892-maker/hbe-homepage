@@ -3,26 +3,20 @@ import { ICONS } from "../lib/icons"
 
 export default function PricingBanner() {
   return (
-    <section className="bg-white px-5 md:px-14 py-10 md:py-14">
-      <div className="card-elevated grid md:grid-cols-2 items-center bg-offwhite border border-hairline rounded-3xl overflow-hidden">
-        <div className="p-8 md:p-12">
-          <span className="text-primary text-[13px] font-bold">한국방역환경이 솔직하게 알려드리는</span>
-          <h2 className="text-[22px] md:text-[26px] font-extrabold text-deep tracking-[-0.02em] mt-1 mb-4">
-            &lsquo;가정집 방역 비용&rsquo;의 진실
+    <section className="bg-white px-5 py-10 md:px-14 md:py-14">
+      <div className="mx-auto grid max-w-[1180px] items-center gap-6 rounded-[8px] border border-hairline bg-offwhite p-7 md:grid-cols-[1fr_auto] md:p-10">
+        <div>
+          <span className="text-[13px] font-bold text-primary">견적은 현장을 보고 정확하게</span>
+          <h2 className="mt-2 text-[24px] font-extrabold tracking-[-0.02em] text-deep md:text-[32px]">
+            같은 바퀴벌레 방제라도 공간과 발생 정도에 따라 비용은 달라집니다.
           </h2>
-          <p className="text-[14.5px] text-body leading-relaxed mb-6 max-w-[420px]">
-            비용은 공간 크기와 서식 정도에 따라 달라집니다. 방문 전 전화로 대략적인 비용을 안내해드리고,
-            현장 확인 후 정확한 견적을 말씀드립니다 — 숨겨진 추가 비용은 없습니다.
+          <p className="mt-4 max-w-[700px] text-[15px] leading-relaxed text-body3">
+            전화 상담으로 기본 범위를 먼저 확인하고, 방문 진단 후 필요한 관리만 견적에 반영합니다.
           </p>
-          <Link href="/support" className="btn-signature btn-primary inline-block font-bold text-[14.5px] px-6 py-3.5">
-            가정집 비용 확인하기
-          </Link>
         </div>
-        <div className="hidden md:flex items-center justify-center p-12">
-          <span className="w-40 h-40 rounded-full bg-tint2 text-primary flex items-center justify-center">
-            <ICONS.Search size={56} strokeWidth={1.5} aria-hidden="true" />
-          </span>
-        </div>
+        <Link href="/support" className="inline-flex items-center justify-center gap-2 rounded-[8px] bg-primary px-6 py-3.5 text-[14.5px] font-extrabold text-white transition hover:brightness-95">
+          비용 문의하기 <ICONS.ArrowRight size={17} aria-hidden="true" />
+        </Link>
       </div>
     </section>
   )
