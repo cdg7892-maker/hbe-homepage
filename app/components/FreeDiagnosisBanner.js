@@ -1,24 +1,37 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ICONS } from "../lib/icons"
 
 export default function FreeDiagnosisBanner() {
   return (
-    <section className="bg-deep px-5 py-14 text-white md:px-14 md:py-16">
-      <div className="mx-auto grid max-w-[1180px] items-center gap-8 md:grid-cols-[1fr_auto]">
-        <div>
-          <p className="text-[14px] font-bold text-white/55">현장 진단부터 사후 관리까지</p>
-          <h2 className="mt-2 text-[25px] font-extrabold leading-[1.38] tracking-[-0.02em] md:text-[34px]">
-            우리 집, 우리 매장에 필요한 방역을
+    <section className="bg-white px-5 py-8 md:px-14 md:py-10">
+      <div className="relative mx-auto min-h-[280px] max-w-[1280px] overflow-hidden bg-[#eef8fb]">
+        <Image
+          src="/images/home/certificate-education.png"
+          alt="방역 교육 이수증 자료"
+          fill
+          sizes="100vw"
+          className="object-cover object-[70%_34%] opacity-20"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(239,249,252,0.98)_0%,rgba(239,249,252,0.86)_38%,rgba(16,26,53,0.52)_100%)]" />
+        <div className="relative px-6 py-12 md:px-28">
+          <p className="text-[14px] leading-relaxed text-body3">
+            해충방제부터 위생 환경 솔루션까지
             <br />
-            무료 상담으로 먼저 확인하세요.
+            우리집, 우리 사업장으로 찾아오는 전문 진단
+          </p>
+          <h2 className="mt-3 text-[30px] font-extrabold tracking-[-0.02em] text-deep md:text-[42px]">
+            무료진단으로 확인하세요.
           </h2>
+          <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-[8px] bg-[#08153a] px-6 py-3.5 text-[14px] font-extrabold text-white transition hover:bg-primary">
+            무료진단 신청하기 <ICONS.ArrowRight size={17} aria-hidden="true" />
+          </Link>
+          <div className="mt-8 flex gap-3 text-deep">
+            <ICONS.ChevronLeft size={20} aria-hidden="true" />
+            <span className="h-5 w-px bg-deep/20" />
+            <ICONS.ChevronRight size={20} aria-hidden="true" />
+          </div>
         </div>
-        <Link
-          href="/contact"
-          className="inline-flex items-center justify-center gap-2 rounded-[8px] bg-white px-7 py-4 text-[15px] font-extrabold text-deep transition hover:brightness-95"
-        >
-          무료 진단 신청 <ICONS.ArrowRight size={17} aria-hidden="true" />
-        </Link>
       </div>
     </section>
   )

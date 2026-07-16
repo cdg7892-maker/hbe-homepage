@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { SERVICES_DATA } from "../lib/services-data"
 import { ICONS } from "../lib/icons"
@@ -13,61 +14,61 @@ export default function SolutionCarousel() {
   }
 
   return (
-    <section className="bg-white px-5 py-16 md:px-14 md:py-22">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div>
-            <span className="text-[13px] font-extrabold uppercase tracking-[0.08em] text-primary">Programs</span>
-            <h2 className="mt-2 text-[26px] font-extrabold tracking-[-0.02em] text-deep md:text-[36px]">
-              생활과 영업을 멈추지 않는 방역 프로그램
-            </h2>
-          </div>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={() => scrollBy(-320)}
-              aria-label="이전 서비스 보기"
-              className="flex h-11 w-11 items-center justify-center rounded-[8px] border border-hairline text-body transition hover:border-primary hover:text-deep"
-            >
-              <ICONS.ChevronLeft size={20} aria-hidden="true" />
+    <section className="bg-white px-5 py-18 md:px-14 md:py-24">
+      <div className="mx-auto grid max-w-[1180px] gap-9 lg:grid-cols-[280px_1fr]">
+        <div>
+          <h2 className="text-[31px] font-extrabold leading-[1.25] tracking-[-0.02em] text-deep md:text-[42px]">
+            한국방역환경의
+            <br />
+            다양한 솔루션을
+            <br />
+            만나보세요!
+          </h2>
+          <p className="mt-6 text-[15px] leading-relaxed text-body3">
+            생활부터 공간까지, 필요한 순간에 맞춘 전문 서비스를 제공합니다.
+          </p>
+          <div className="mt-9 flex gap-3 text-deep">
+            <button type="button" onClick={() => scrollBy(-340)} aria-label="이전 솔루션" className="transition hover:text-primary">
+              <ICONS.ChevronLeft size={22} aria-hidden="true" />
             </button>
-            <button
-              type="button"
-              onClick={() => scrollBy(320)}
-              aria-label="다음 서비스 보기"
-              className="flex h-11 w-11 items-center justify-center rounded-[8px] border border-hairline text-body transition hover:border-primary hover:text-deep"
-            >
-              <ICONS.ChevronRight size={20} aria-hidden="true" />
+            <span className="h-6 w-px bg-hairline-soft2" />
+            <button type="button" onClick={() => scrollBy(340)} aria-label="다음 솔루션" className="transition hover:text-primary">
+              <ICONS.ChevronRight size={22} aria-hidden="true" />
             </button>
           </div>
         </div>
 
-        <div ref={scrollRef} className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-3 scroll-smooth">
-          {SERVICES_DATA.map((s, i) => {
+        <div ref={scrollRef} className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 scroll-smooth">
+          {SERVICES_DATA.map((s, index) => {
             const Icon = ICONS[s.icon]
-            const highlighted = i === 0
+            const featured = index === 0
             return (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className={`min-h-[260px] w-[280px] shrink-0 snap-start rounded-[8px] border p-6 transition hover:-translate-y-1 ${
-                  highlighted
-                    ? "border-primary bg-primary text-white shadow-xl shadow-primary/20"
-                    : "border-hairline bg-offwhite hover:border-primary hover:bg-white"
+                className={`relative min-h-[270px] w-[250px] shrink-0 snap-start overflow-hidden rounded-[48px_8px_48px_8px] border-2 p-7 transition hover:-translate-y-1 md:w-[280px] ${
+                  featured ? "border-primary bg-primary text-white shadow-2xl shadow-primary/25" : "border-primary bg-white text-deep"
                 }`}
               >
-                <span
-                  className={`mb-8 flex h-14 w-14 items-center justify-center rounded-[8px] ${
-                    highlighted ? "bg-white/16" : "bg-white text-primary"
-                  }`}
-                >
-                  {Icon && <Icon size={25} strokeWidth={2} color={highlighted ? "#fff" : undefined} aria-hidden="true" />}
-                </span>
-                <div className={`text-[19px] font-extrabold ${highlighted ? "text-white" : "text-deep"}`}>{s.title}</div>
-                <p className={`mt-3 text-[14px] leading-relaxed ${highlighted ? "text-white/75" : "text-body3"}`}>{s.heroDesc}</p>
-                <span className={`mt-7 inline-flex items-center gap-2 text-[13px] font-extrabold ${highlighted ? "text-white" : "text-primary"}`}>
-                  자세히 보기 <ICONS.ArrowRight size={16} aria-hidden="true" />
-                </span>
+                {featured && (
+                  <>
+                    <Image
+                      src="/images/home/hero-sanitation-tech.png"
+                      alt=""
+                      fill
+                      sizes="280px"
+                      className="object-cover opacity-25"
+                    />
+                    <div className="absolute inset-0 bg-primary/78" />
+                  </>
+                )}
+                <div className="relative">
+                  <span className={`mb-10 flex h-13 w-13 items-center justify-center rounded-[8px] ${featured ? "bg-white/15" : "bg-tint text-primary"}`}>
+                    {Icon && <Icon size={26} strokeWidth={1.8} aria-hidden="true" />}
+                  </span>
+                  <h3 className={`text-[22px] font-extrabold leading-snug ${featured ? "text-white" : "text-primary"}`}>{s.title}</h3>
+                  <p className={`mt-4 text-[14px] leading-relaxed ${featured ? "text-white/82" : "text-body3"}`}>{s.shortDesc}</p>
+                </div>
               </Link>
             )
           })}

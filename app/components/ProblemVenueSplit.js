@@ -4,70 +4,68 @@ import { ICONS } from "../lib/icons"
 
 export default function ProblemVenueSplit() {
   return (
-    <section id="problems" className="scroll-mt-20 bg-white px-5 py-16 md:px-14 md:py-24">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-          <div>
-            <span className="text-[13px] font-extrabold uppercase tracking-[0.08em] text-primary">Solution Finder</span>
-            <h2 className="mt-3 text-[30px] font-extrabold leading-[1.28] tracking-[-0.02em] text-deep md:text-[44px]">
+    <section id="problems" className="scroll-mt-20 overflow-hidden bg-white">
+      <div className="grid lg:grid-cols-2">
+        <div className="relative bg-primary px-5 py-16 text-white md:px-14 md:py-24 lg:pr-24">
+          <div className="absolute inset-y-0 right-[-86px] z-10 hidden w-40 skew-x-[-8deg] bg-primary lg:block" />
+          <div className="relative z-20 mx-auto max-w-[520px] lg:ml-auto">
+            <h2 className="text-[31px] font-extrabold leading-[1.3] tracking-[-0.02em] md:text-[42px]">
               어떤 문제를
               <br />
               해결하고 싶나요?
             </h2>
-            <p className="mt-4 text-[16px] leading-[1.75] text-body3">
-              해충, 소독, 수질, 공기질까지 공간의 상태를 먼저 보고 가장 필요한 관리부터 제안합니다.
+            <p className="mt-5 text-[15px] leading-relaxed text-white/70">
+              생활 속 불편부터 매장 위생까지, 증상에 맞는 최적의 솔루션을 찾아드립니다.
             </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-            {SERVICES_DATA.slice(0, 8).map((s) => {
-              const Icon = ICONS[s.icon]
-              return (
-                <Link
-                  key={s.slug}
-                  href={`/services/${s.slug}`}
-                  className="group rounded-[8px] border border-hairline bg-offwhite p-4 transition hover:-translate-y-1 hover:border-primary hover:bg-white hover:shadow-lg hover:shadow-deep/5"
-                >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-[8px] bg-tint text-primary transition group-hover:bg-primary group-hover:text-white">
-                    {Icon && <Icon size={23} strokeWidth={2} aria-hidden="true" />}
-                  </span>
-                  <strong className="mt-4 block text-[15.5px] text-deep">{s.title}</strong>
-                  <span className="mt-2 block text-[13px] leading-relaxed text-body2">{s.shortDesc}</span>
-                </Link>
-              )
-            })}
+            <div className="mt-9 grid grid-cols-2 border border-white/25 sm:grid-cols-4">
+              {SERVICES_DATA.slice(0, 8).map((s) => {
+                const Icon = ICONS[s.icon]
+                return (
+                  <Link
+                    key={s.slug}
+                    href={`/services/${s.slug}`}
+                    className="group flex aspect-square flex-col items-center justify-center gap-3 border-b border-r border-white/25 p-3 text-center transition hover:bg-white/12"
+                  >
+                    {Icon && <Icon size={28} strokeWidth={1.7} aria-hidden="true" />}
+                    <span className="text-[12px] font-extrabold leading-tight">{s.title}</span>
+                  </Link>
+                )
+              })}
+            </div>
+            <Link href="/services" className="mt-9 inline-flex items-center gap-3 text-[14px] font-extrabold text-white">
+              펼쳐보기 <ICONS.ArrowRight size={18} aria-hidden="true" />
+            </Link>
           </div>
         </div>
 
-        <div className="mt-14 border-t border-hairline pt-10">
-          <div className="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-end">
-            <div>
-              <span className="text-[13px] font-extrabold uppercase tracking-[0.08em] text-primary">By Space</span>
-              <h3 className="mt-2 text-[24px] font-extrabold tracking-[-0.02em] text-deep md:text-[32px]">
-                장소별로 필요한 방역은 다릅니다
-              </h3>
+        <div className="bg-[#101a35] px-5 py-16 text-white md:px-14 md:py-24 lg:pl-28">
+          <div className="mx-auto max-w-[520px] lg:mr-auto">
+            <h2 className="text-right text-[31px] font-extrabold leading-[1.3] tracking-[-0.02em] md:text-[42px]">
+              어느 곳에
+              <br />
+              방역이 필요한가요?
+            </h2>
+            <p className="mt-5 text-right text-[15px] leading-relaxed text-white/60">
+              장소별 사용 동선과 위생 기준에 맞춰 솔루션을 제안합니다.
+            </p>
+            <div className="mt-9 grid grid-cols-2 border border-white/25 sm:grid-cols-3">
+              {VENUES.map((v) => {
+                const Icon = ICONS[v.icon]
+                return (
+                  <Link
+                    key={v.key}
+                    href="/services"
+                    className="group flex aspect-square flex-col items-center justify-center gap-3 border-b border-r border-white/25 p-3 text-center transition hover:bg-white/10"
+                  >
+                    {Icon && <Icon size={28} strokeWidth={1.7} aria-hidden="true" />}
+                    <span className="text-[12px] font-extrabold leading-tight">{v.label}</span>
+                  </Link>
+                )
+              })}
             </div>
-            <Link href="/services" className="inline-flex items-center gap-2 text-[14px] font-extrabold text-primary">
-              전체 서비스 보기 <ICONS.ArrowRight size={17} aria-hidden="true" />
+            <Link href="/services" className="mt-9 inline-flex items-center gap-3 text-[14px] font-extrabold text-white">
+              <ICONS.ChevronLeft size={18} aria-hidden="true" /> 펼쳐보기
             </Link>
-          </div>
-          <div className="grid gap-3 md:grid-cols-5">
-            {VENUES.map((v) => {
-              const Icon = ICONS[v.icon]
-              return (
-                <Link
-                  key={v.key}
-                  href="/services"
-                  className="rounded-[8px] bg-deep p-5 text-white transition hover:-translate-y-1 hover:bg-primary"
-                >
-                  <span className="mb-5 flex h-11 w-11 items-center justify-center rounded-[8px] bg-white/12">
-                    {Icon && <Icon size={22} strokeWidth={2} aria-hidden="true" />}
-                  </span>
-                  <strong className="text-[17px]">{v.label}</strong>
-                  <span className="mt-3 block text-[13px] leading-relaxed text-white/72">{v.blurb}</span>
-                </Link>
-              )
-            })}
           </div>
         </div>
       </div>
