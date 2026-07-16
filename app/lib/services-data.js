@@ -4,16 +4,19 @@ export const VENUES = [
   {
     key: "home",
     label: "가정집",
+    icon: "Home",
     blurb: "아이와 반려동물이 함께 지내는 공간인 만큼 안전한 약제와 꼼꼼한 마감 처리를 우선합니다.",
   },
   {
     key: "store",
     label: "매장·상가",
+    icon: "Store",
     blurb: "영업 중 방해가 적은 시간대 방문, 손님 눈에 띄지 않는 시공을 우선합니다.",
   },
   {
     key: "office",
     label: "사무실",
+    icon: "Building2",
     blurb: "근무 시간 외 방문이 가능하며, 여러 층·구역을 한 번에 관리해드립니다.",
   },
 ]

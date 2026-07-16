@@ -19,6 +19,12 @@ import {
   Menu,
   X,
   ChevronDown,
+  Home,
+  Store,
+  Building2,
+  ArrowRight,
+  Quote,
+  MapPinned,
 } from "lucide-react"
 
 export const ICONS = {
@@ -42,4 +48,10 @@ export const ICONS = {
   Menu,
   X,
   ChevronDown,
+  Home,
+  Store,
+  Building2,
+  ArrowRight,
+  Quote,
+  MapPinned,
 }

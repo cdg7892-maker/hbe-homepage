@@ -22,6 +22,7 @@
   --font-sans: var(--font-pretendard), system-ui, sans-serif;
   --radius-card: 20px;
   --radius-image: 24px;
+  --radius-btn: 28px 8px 28px 8px;
 }
 
 html {
@@ -58,4 +59,44 @@ a {
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* 시그니처 버튼 — 완전한 pill이 아닌 비대칭 radius로 브랜드만의 형태감을 준다 */
+.btn-signature {
+  border-radius: var(--radius-btn);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-signature:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 8px 20px -6px rgba(74, 138, 104, 0.45);
+}
+
+.btn-primary:hover {
+  filter: brightness(0.97);
+  box-shadow: 0 12px 24px -6px rgba(74, 138, 104, 0.55);
+}
+
+.card-elevated {
+  box-shadow: 0 4px 16px -6px rgba(44, 71, 54, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-elevated:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -10px rgba(44, 71, 54, 0.16);
+}
+
+/* 히어로 등에 쓰는 장식용 블롭 배경 — 실사진 없이도 공간에 깊이감을 준다 */
+.blob-decoration {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 0;
 }
