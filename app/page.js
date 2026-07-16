@@ -1,8 +1,12 @@
 import Hero from "./components/Hero"
 import TrustStrip from "./components/TrustStrip"
-import Services from "./components/Services"
-import VenuePicker from "./components/VenuePicker"
-import Testimonial from "./components/Testimonial"
+import ProblemVenueSplit from "./components/ProblemVenueSplit"
+import PricingBanner from "./components/PricingBanner"
+import FreeDiagnosisBanner from "./components/FreeDiagnosisBanner"
+import SolutionCarousel from "./components/SolutionCarousel"
+import FaqTeaser from "./components/FaqTeaser"
+import ColumnTeaser from "./components/ColumnTeaser"
+import ReviewsSection from "./components/ReviewsSection"
 import ServiceArea from "./components/ServiceArea"
 import Cta from "./components/Cta"
 
@@ -11,9 +15,13 @@ export default function Home() {
     <>
       <Hero />
       <TrustStrip />
-      <Services />
-      <VenuePicker />
-      <Testimonial />
+      <ProblemVenueSplit />
+      <PricingBanner />
+      <FreeDiagnosisBanner />
+      <SolutionCarousel />
+      <FaqTeaser />
+      <ColumnTeaser />
+      <ReviewsSection />
       <ServiceArea />
       <Cta />
     </>

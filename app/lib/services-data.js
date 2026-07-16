@@ -19,6 +19,18 @@ export const VENUES = [
     icon: "Building2",
     blurb: "근무 시간 외 방문이 가능하며, 여러 층·구역을 한 번에 관리해드립니다.",
   },
+  {
+    key: "warehouse",
+    label: "창고·물류",
+    icon: "Warehouse",
+    blurb: "적재 공간과 하역구 등 침입·서식 경로를 집중 점검해 재발을 방지합니다.",
+  },
+  {
+    key: "public",
+    label: "공공기관",
+    icon: "Landmark",
+    blurb: "사전 협의된 일정과 안전 규정에 맞춰 민원 없이 시공합니다.",
+  },
 ]
 
 export const SERVICES_DATA = [
@@ -39,6 +51,8 @@ export const SERVICES_DATA = [
       home: { relevant: true, note: "주방·화장실 배관 틈새를 중심으로 아이도 안심할 수 있는 약제로 시공합니다." },
       store: { relevant: true, note: "주방·창고 등 위생이 중요한 공간은 영업시간 외 방문으로 조율 가능합니다." },
       office: { relevant: true, note: "탕비실·창고 위주로 점검하며, 여러 층을 한 번에 관리해드립니다." },
+      warehouse: { relevant: true, note: "식자재·포장재가 많은 창고는 서식 위험이 높아 정기 점검을 권장합니다." },
+      public: { relevant: true, note: "공공기관은 사전 협의된 일정으로 방문해 민원 없이 시공합니다." },
     },
     faq: [
       { q: "약제 냄새가 많이 나나요?", a: "저자극 약제를 사용하며, 시공 후 환기를 안내해드립니다." },
@@ -61,6 +75,8 @@ export const SERVICES_DATA = [
       home: { relevant: true, note: "아이·반려동물 안전을 위해 노출형 독먹이보다 트랩·차단 위주로 진행합니다." },
       store: { relevant: true, note: "창고·물류 공간의 침입 경로를 우선 점검합니다." },
       office: { relevant: false, note: "사무 공간에서는 드물지만 창고·탕비실 침입 흔적이 있다면 점검해드립니다." },
+      warehouse: { relevant: true, note: "물류 창고는 하역구·배관 틈새 등 주요 침입 경로를 집중 점검합니다." },
+      public: { relevant: true, note: "공공기관 건물은 안전 규정에 맞춰 트랩 위주로 진행합니다." },
     },
     faq: [
       { q: "쥐가 다시 들어올 수도 있나요?", a: "침입로를 물리적으로 막는 작업을 함께 진행해 재발 가능성을 낮춥니다." },
@@ -82,6 +98,8 @@ export const SERVICES_DATA = [
       home: { relevant: true, note: "베란다·화단 등 발생원 위주로 관리합니다." },
       store: { relevant: true, note: "야외 테이블이 있는 매장은 영업 전 시간대 방문을 권장합니다." },
       office: { relevant: false, note: "옥상·화단이 있는 건물은 발생원 점검을 함께 진행합니다." },
+      warehouse: { relevant: true, note: "환기구·적재공간의 유입 경로를 점검하고 방역합니다." },
+      public: { relevant: false, note: "실외 활동이 많은 시설은 정기 방문으로 발생원을 관리합니다." },
     },
     faq: [
       { q: "여름 한 철만 관리하면 되나요?", a: "발생 시기 전 미리 방문하면 더 효과적입니다. 정기 방문도 안내해드립니다." },
@@ -103,6 +121,8 @@ export const SERVICES_DATA = [
       home: { relevant: true, note: "출산·감염병 이후 등 가정 위생 관리가 필요한 시점에 특히 권장합니다." },
       store: { relevant: true, note: "위생 점검이 잦은 식당·매장은 정기 소독 이력 관리를 도와드립니다." },
       office: { relevant: true, note: "다수 인원이 근무하는 사무 공간의 정기 소독을 지원합니다." },
+      warehouse: { relevant: true, note: "다수 인원이 드나드는 창고·물류센터의 정기 소독을 지원합니다." },
+      public: { relevant: true, note: "공공시설은 정기 소독 이력 관리와 확인서 발급을 도와드립니다." },
     },
     faq: [
       { q: "소독 증명서 발급이 되나요?", a: "네, 시공 확인서를 발급해드립니다." },
@@ -124,6 +144,8 @@ export const SERVICES_DATA = [
       home: { relevant: true, note: "욕실·베란다·붙박이장 등 결로가 잦은 공간을 우선 확인합니다." },
       store: { relevant: false, note: "지하 매장 등 습도가 높은 공간은 별도 진단을 안내해드립니다." },
       office: { relevant: false, note: "환기가 어려운 공간 위주로 점검이 필요할 수 있습니다." },
+      warehouse: { relevant: true, note: "습도 관리가 어려운 창고는 환기·제습 상태를 함께 점검합니다." },
+      public: { relevant: false, note: "다수 이용 시설의 실내공기질 점검을 지원합니다." },
     },
     faq: [
       { q: "곰팡이가 금방 다시 생기지 않나요?", a: "원인(환기·결로 등)을 함께 안내해드려 재발 가능성을 낮출 수 있습니다." },
@@ -145,6 +167,8 @@ export const SERVICES_DATA = [
       home: { relevant: true, note: "아이 방·안방 매트리스를 중심으로 위생 관리를 도와드립니다." },
       store: { relevant: false, note: "숙박업 등 매트리스가 많은 경우 별도 견적을 안내해드립니다." },
       office: { relevant: false, note: "숙직실 등 매트리스가 있는 경우 문의해주세요." },
+      warehouse: { relevant: false, note: "해당 사항이 적어 문의 시 별도로 안내해드립니다." },
+      public: { relevant: false, note: "기숙사·숙직 시설이 있는 경우 문의해주세요." },
     },
     faq: [
       { q: "매트리스가 젖은 채로 남지 않나요?", a: "충분히 건조시키는 과정을 거쳐 마무리해드립니다." },
@@ -166,6 +190,8 @@ export const SERVICES_DATA = [
       home: { relevant: false, note: "공동주택은 관리사무소를 통한 일정 조율이 필요할 수 있습니다." },
       store: { relevant: true, note: "정기 저수조 청소 의무가 있는 업종은 이력 관리를 도와드립니다." },
       office: { relevant: true, note: "건물 저수조 정기 청소 일정을 관리해드립니다." },
+      warehouse: { relevant: true, note: "물류창고 저수조도 정기 점검 대상입니다." },
+      public: { relevant: true, note: "공공기관 저수조는 법정 주기에 맞춰 안내해드립니다." },
     },
     faq: [
       { q: "청소 주기는 어떻게 되나요?", a: "법정 청소 주기 안내를 도와드리며, 정기 일정 관리도 가능합니다." },

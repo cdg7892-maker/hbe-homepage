@@ -25,6 +25,15 @@ import {
   ArrowRight,
   Quote,
   MapPinned,
+  Warehouse,
+  Landmark,
+  Search,
+  ClipboardList,
+  Newspaper,
+  MessageSquareQuote,
+  ChevronLeft,
+  ChevronRight,
+  Sparkles,
 } from "lucide-react"
 
 export const ICONS = {
@@ -54,4 +63,13 @@ export const ICONS = {
   ArrowRight,
   Quote,
   MapPinned,
+  Warehouse,
+  Landmark,
+  Search,
+  ClipboardList,
+  Newspaper,
+  MessageSquareQuote,
+  ChevronLeft,
+  ChevronRight,
+  Sparkles,
 }
