@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { ArrowLeft, CalendarDays, CheckCircle2, Clock3, Phone, ShieldCheck } from "lucide-react"
 import { COLUMN_DATA, getColumnBySlug, getRelatedColumns } from "../../lib/column-data"
 import { SITE } from "../../lib/site"
+import { SITE_URL } from "../../lib/config"
 
 export function generateStaticParams() {
   return COLUMN_DATA.map((column) => ({ slug: column.slug }))
@@ -22,6 +23,16 @@ export async function generateMetadata({ params }) {
   return {
     title: column.title,
     description: column.excerpt,
+    alternates: {
+      canonical: `/blog/${column.slug}`,
+    },
+    openGraph: {
+      type: "article",
+      title: column.title,
+      description: column.excerpt,
+      url: `${SITE_URL}/blog/${column.slug}`,
+      images: [{ url: column.image, alt: column.imageAlt }],
+    },
   }
 }
 
@@ -34,9 +45,26 @@ export default async function BlogDetailPage({ params }) {
   }
 
   const relatedColumns = getRelatedColumns(column.slug, 3)
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: column.title,
+    description: column.excerpt,
+    image: `${SITE_URL}${column.image}`,
+    author: {
+      "@type": "Organization",
+      name: SITE.companyName,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE.companyName,
+    },
+    mainEntityOfPage: `${SITE_URL}/blog/${column.slug}`,
+  }
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <article>
         <header className="bg-offwhite px-5 py-12 md:px-14 md:py-18">
           <div className="mx-auto max-w-[980px]">
