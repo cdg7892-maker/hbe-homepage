@@ -22,6 +22,11 @@ export const metadata = {
   },
   description:
     "전남 강진군 강진읍 소재 한국방역환경. 바퀴벌레·쥐·모기파리 방제, 소독·방역, 실내공기질, 물탱크 청소까지 강진군 전 지역 출동.",
+  verification: {
+    other: {
+      "naver-site-verification": "f67955643a13a72af8fcfc2dcdb4d580c91657fe",
+    },
+  },
   openGraph: {
     type: "website",
     title: `${SITE.companyName} | 강진군 방역·해충방제 전문업체`,
