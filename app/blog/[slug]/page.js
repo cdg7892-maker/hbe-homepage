@@ -128,12 +128,12 @@ export default async function BlogDetailPage({ params }) {
                 <h2 className="text-[18px] font-extrabold text-deep">목차</h2>
                 <nav className="mt-4 grid gap-3 text-[14px] font-bold leading-relaxed text-body3">
                   {[
-                    ["search-worries", "검색자가 느끼는 불안"],
-                    ["yes-set", "YES 세트"],
-                    ["instinct", "본능 분석"],
-                    ["objections", "맡기기 전 의심 제거"],
-                    ["proof", "숫자와 근거"],
-                    ["field-process", "현장 기준"],
+                    ["search-worries", "먼저 드는 걱정"],
+                    ["yes-set", "꼭 확인할 문제"],
+                    ["instinct", "빨리 확인해야 하는 이유"],
+                    ["objections", "업체 선택 전 확인할 것"],
+                    ["proof", "한국방역환경의 안내 기준"],
+                    ["field-process", "현장 점검 순서"],
                     ["faq", "자주 묻는 질문"],
                   ].map(([id, label], index) => (
                     <a key={id} href={`#${id}`} className="transition hover:text-primary">
@@ -151,7 +151,7 @@ export default async function BlogDetailPage({ params }) {
 
             <div>
               <section id="search-worries" className="scroll-mt-28 rounded-[8px] border border-hairline bg-[#07142a] p-6 text-white shadow-2xl shadow-deep/10 md:p-8">
-                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-white/58">Search Intent</p>
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-white/58">Check First</p>
                 <h2 className="mt-3 text-[28px] font-extrabold leading-[1.32] md:text-[38px]">이 글을 찾으셨다면, 아마 이런 생각부터 드셨을 겁니다.</h2>
                 <div className="mt-6 grid gap-3">
                   {persuasion.worries.map((item) => (
@@ -165,7 +165,7 @@ export default async function BlogDetailPage({ params }) {
               <section id="yes-set" className="mt-8 scroll-mt-28 rounded-[8px] border border-hairline bg-tint p-6 md:p-8">
                 <h2 className="flex items-center gap-2 text-[24px] font-extrabold text-deep">
                   <ShieldCheck size={24} className="text-primary" aria-hidden="true" />
-                  먼저 고개가 끄덕여지는 사실
+                  이 문제는 가볍게 넘기기 어렵습니다
                 </h2>
                 <div className="mt-5 grid gap-3">
                   {persuasion.yesSet.map((item) => (
@@ -178,7 +178,7 @@ export default async function BlogDetailPage({ params }) {
                 </section>
 
               <section id="instinct" className="mt-10 scroll-mt-28">
-                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">왜 이렇게 불안하게 느껴질까요?</h2>
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">빨리 확인해야 하는 이유</h2>
                 <p className="mt-5 text-[18px] leading-[1.95] text-body3">{persuasion.instinct}</p>
                 <p className="mt-5 rounded-[8px] border-l-4 border-primary bg-offwhite p-5 text-[17px] font-bold leading-[1.85] text-deep">
                   {persuasion.bridge}
@@ -186,7 +186,7 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="objections" className="mt-12 scroll-mt-28 rounded-[8px] border border-hairline bg-white p-6 shadow-xl shadow-deep/5 md:p-8">
-                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">업체에 맡기기 전 생기는 의심을 먼저 지웁니다</h2>
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">업체를 고르기 전 꼭 확인할 것</h2>
                 <div className="mt-6 grid gap-4">
                   {persuasion.objections.map((item) => (
                     <div key={item.concern} className="rounded-[8px] border border-hairline bg-offwhite p-5">
@@ -198,7 +198,7 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="proof" className="mt-12 scroll-mt-28 rounded-[8px] border border-primary/20 bg-tint p-6 md:p-8">
-                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">형용사 대신 확인 가능한 숫자와 근거</h2>
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">한국방역환경이 안내하는 기준</h2>
                 <div className="mt-6 grid gap-3">
                   {persuasion.proofPoints.map((item) => (
                     <div key={item} className="flex gap-3 rounded-[8px] bg-white p-4">
@@ -210,7 +210,7 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="field-process" className="mt-12 scroll-mt-28">
-                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">현장에서는 이 순서로 확인합니다</h2>
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">현장에서는 이 순서로 점검합니다</h2>
                 <div className="mt-6 grid gap-3 md:grid-cols-2">
                   {persuasion.fieldProcess.map((item, index) => (
                     <div key={item} className="rounded-[8px] border border-hairline bg-white p-5 shadow-sm shadow-deep/4">
