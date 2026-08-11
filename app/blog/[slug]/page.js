@@ -215,7 +215,7 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="core-solution" className="mt-12 scroll-mt-28 rounded-[8px] border border-hairline bg-[#07142a] p-6 text-white md:p-8">
-                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-white/58">Core Solution</p>
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-white/58">Solution</p>
                 <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] md:text-[38px]">{careModel.solutionTitle}</h2>
                 <p className="mt-4 max-w-[760px] text-[16px] leading-[1.85] text-white/72">{careModel.solutionIntro}</p>
                 <div className="mt-7 grid gap-4 md:grid-cols-2">
@@ -230,7 +230,7 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="root-causes" className="mt-12 scroll-mt-28">
-                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Root Causes</p>
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Cause Check</p>
                 <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">문제가 반복되는 주요 원인</h2>
                 <p className="mt-4 text-[16px] leading-[1.85] text-body3">겉으로 보이는 증상보다, 같은 문제가 반복되는 환경을 찾는 것이 중요합니다.</p>
                 <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -245,7 +245,7 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="personalized-care" className="mt-12 scroll-mt-28 rounded-[8px] border border-hairline bg-offwhite p-6 md:p-8">
-                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Personalized Care</p>
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">By Space</p>
                 <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">유형별 맞춤 점검 기준</h2>
                 <p className="mt-4 text-[16px] leading-[1.85] text-body3">같은 문제처럼 보여도 공간의 구조와 이용 방식에 따라 확인 순서가 달라집니다.</p>
                 <div className="mt-7 grid gap-5">
@@ -279,7 +279,7 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="management-timeline" className="mt-12 scroll-mt-28">
-                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Management Timeline</p>
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">After Care</p>
                 <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">작업 후 관리는 이렇게 봅니다</h2>
                 <div className="mt-6 grid gap-4 md:grid-cols-3">
                   {careModel.managementTimeline.map(([step, title, body]) => (
@@ -293,8 +293,8 @@ export default async function BlogDetailPage({ params }) {
               </section>
 
               <section id="hbe-program" className="mt-12 scroll-mt-28 rounded-[8px] border border-primary/20 bg-tint p-6 md:p-8">
-                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">HBE Program</p>
-                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">한국방역환경 관리 프로그램</h2>
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Visit Flow</p>
+                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">상담부터 사후 안내까지의 흐름</h2>
                 <div className="mt-6 grid gap-4 md:grid-cols-3">
                   {careModel.hbeProgram.map(([title, body]) => (
                     <div key={title} className="rounded-[8px] bg-white p-5">
