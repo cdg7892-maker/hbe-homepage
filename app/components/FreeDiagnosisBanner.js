@@ -14,19 +14,23 @@ export default function FreeDiagnosisBanner() {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover object-[72%_50%]"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(239,249,252,0.98),rgba(239,249,252,0.34))]" />
-          <div className="relative px-6 py-12 md:px-12">
-            <p className="text-[14px] leading-relaxed text-body3">
-              해충방제부터 위생 환경 솔루션까지
-              <br />
-              우리집, 우리 사업장으로 찾아오는 전문 진단
-            </p>
-            <h2 className="mt-3 text-[30px] font-extrabold tracking-[-0.02em] text-deep md:text-[42px]">
-              무료진단으로 먼저 확인하세요.
-            </h2>
-            <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-[8px] bg-[#08153a] px-6 py-3.5 text-[14px] font-extrabold text-white transition hover:bg-primary">
-              무료진단 신청하기 <ICONS.ArrowRight size={17} aria-hidden="true" />
-            </Link>
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(244,250,247,0.96)_0%,rgba(244,250,247,0.9)_42%,rgba(244,250,247,0.24)_72%,rgba(244,250,247,0)_100%)]" />
+          <div className="relative flex min-h-[330px] items-center px-6 py-10 md:px-12">
+            <div className="max-w-[430px] rounded-[8px] border border-white/80 bg-white/92 p-6 shadow-xl shadow-deep/10 backdrop-blur-sm md:p-7">
+              <p className="text-[14px] font-semibold leading-relaxed text-body3">
+                해충방제부터 위생 환경 솔루션까지
+                <br />
+                우리집, 우리 사업장으로 찾아오는 전문 진단
+              </p>
+              <h2 className="mt-3 text-[30px] font-extrabold leading-tight tracking-[-0.02em] text-deep md:text-[42px]">
+                무료진단으로 먼저
+                <br />
+                확인하세요.
+              </h2>
+              <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-[8px] bg-[#4a8a68] px-6 py-3.5 text-[14px] font-extrabold text-white shadow-lg shadow-primary/20 transition hover:bg-[#3f775a]">
+                무료진단 신청하기 <ICONS.ArrowRight size={17} aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </div>
 
