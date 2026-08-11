@@ -26,7 +26,7 @@ export default function Header() {
           <span className="text-[19px] font-extrabold tracking-[-0.02em] text-deep">{SITE.companyName}</span>
         </Link>
 
-        <nav aria-label="주요 메뉴" className="hidden items-center gap-9 text-[14.5px] font-semibold text-body md:flex">
+        <nav aria-label="주요 메뉴" className="hidden items-center gap-5 text-[14px] font-semibold text-body md:flex lg:gap-8 lg:text-[14.5px]">
           {NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} className="transition-colors hover:text-deep">
               {item.label}
@@ -37,7 +37,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <a
             href={SITE.phoneHref}
-            className="hidden rounded-[8px] bg-tint2 px-[18px] py-[10px] text-[14.5px] font-bold text-deep transition hover:brightness-95 sm:flex"
+            className="hidden rounded-[8px] bg-tint2 px-[18px] py-[10px] text-[14.5px] font-bold text-deep transition hover:brightness-95 xl:flex"
           >
             전화 {SITE.phoneDisplay}
           </a>

@@ -27,7 +27,7 @@ export default function FreeDiagnosisBanner() {
                 <br />
                 확인하세요.
               </h2>
-              <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-[8px] bg-[#4a8a68] px-6 py-3.5 text-[14px] font-extrabold text-white shadow-lg shadow-primary/20 transition hover:bg-[#3f775a]">
+              <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-[8px] bg-[#4a8a68] px-6 py-3.5 text-[14px] font-extrabold !text-white shadow-lg shadow-primary/20 transition hover:bg-[#3f775a]">
                 무료진단 신청하기 <ICONS.ArrowRight size={17} aria-hidden="true" />
               </Link>
             </div>

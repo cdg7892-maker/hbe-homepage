@@ -49,9 +49,13 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-white">
       <div className="border-b border-hairline bg-white px-5 py-5 md:px-14">
         <div className="mx-auto grid max-w-[1180px] gap-4 md:grid-cols-[1fr_500px] md:items-center">
-          <p className="text-[18px] font-extrabold tracking-[-0.02em] text-deep md:text-[22px]">
-            지금 <span className="text-red-500">당신의 고민</span>은 무엇인가요?
-            <span className="ml-1 text-primary">맞춤 솔루션</span>을 추천해 드릴게요.
+          <p className="text-[18px] font-extrabold leading-snug text-deep md:text-[22px]">
+            <span className="inline-block">
+              지금 <span className="text-red-500">당신의 고민</span>은 무엇인가요?
+            </span>
+            <span className="mt-1 block md:mt-0 md:inline md:ml-1">
+              <span className="text-primary">맞춤 솔루션</span>을 추천해 드릴게요.
+            </span>
           </p>
           <div>
             <Link
