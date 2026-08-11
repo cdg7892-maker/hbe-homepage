@@ -133,7 +133,6 @@ export default async function BlogDetailPage({ params }) {
                     ["yes-set", "꼭 확인할 문제"],
                     ["instinct", "빨리 확인해야 하는 이유"],
                     ["objections", "업체 선택 전 확인할 것"],
-                    ["proof", "한국방역환경의 안내 기준"],
                     ["field-process", "현장 점검 순서"],
                     ["core-solution", "핵심 관리 원리"],
                     ["root-causes", "반복 원인"],
@@ -148,7 +147,7 @@ export default async function BlogDetailPage({ params }) {
                   ))}
                   {column.sections.map((section, index) => (
                     <a key={section.heading} href={`#section-${index + 1}`} className="transition hover:text-primary">
-                      {index + 13}. {section.heading}
+                      {index + 12}. {section.heading}
                     </a>
                   ))}
                 </nav>
@@ -198,18 +197,6 @@ export default async function BlogDetailPage({ params }) {
                     <div key={item.concern} className="rounded-[8px] border border-hairline bg-offwhite p-5">
                       <h3 className="text-[19px] font-extrabold text-deep">"{item.concern}"</h3>
                       <p className="mt-3 text-[15.5px] leading-[1.85] text-body3">{item.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section id="proof" className="mt-12 scroll-mt-28 rounded-[8px] border border-primary/20 bg-tint p-6 md:p-8">
-                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">한국방역환경이 안내하는 기준</h2>
-                <div className="mt-6 grid gap-3">
-                  {persuasion.proofPoints.map((item) => (
-                    <div key={item} className="flex gap-3 rounded-[8px] bg-white p-4">
-                      <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
-                      <p className="text-[15px] font-semibold leading-relaxed text-deep">{item}</p>
                     </div>
                   ))}
                 </div>

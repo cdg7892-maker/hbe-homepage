@@ -3541,14 +3541,6 @@ const OBJECTION_HANDLING = [
   },
 ]
 
-const PROOF_POINTS = [
-  "감염병 예방 관련 법정교육 이수 기반의 현장 관리",
-  "소독업무 신고번호 제2100H-0316호",
-  "상담 전화 061-432-1580",
-  "작업 전후 사진 기록 안내 가능",
-  "상담 시 확인 항목 6가지: 위치, 시간대, 반복 여부, 공간 용도, 사진, 방문 가능 시간",
-]
-
 const CARE_PROGRAM = {
   roach: {
     solutionTitle: "바퀴벌레 반복 고리를 끊는 핵심 방역 원리",
@@ -3801,7 +3793,6 @@ function getPersuasionStructure(column) {
     instinct: profile.instinct,
     bridge: "그래서 업체를 알아보게 되지만, 막상 맡기려면 또 다른 걱정이 생깁니다.",
     objections: OBJECTION_HANDLING,
-    proofPoints: PROOF_POINTS,
     fieldProcess: profile.fieldProcess,
     careModel: getCareModel(column),
     cta:
