@@ -29,12 +29,37 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-deep);
   background: #ffffff;
   word-break: keep-all;
   overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+.text-balance {
+  text-wrap: balance;
+}
+
+p,
+li,
+.text-pretty {
+  text-wrap: pretty;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 58px;
+  }
 }
 
 a {

@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative min-h-[720px] bg-deep text-white">
+      <div className="relative min-h-[660px] bg-deep text-white md:min-h-[720px]">
         {heroSlides.map((item, index) => (
           <Image
             key={item.image}
@@ -93,27 +93,27 @@ export default function Hero() {
         <div className="absolute inset-y-0 left-0 hidden w-[58%] bg-primary/58 [clip-path:polygon(0_0,80%_0,100%_100%,0_100%)] lg:block" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/48 via-transparent to-black/10" />
 
-        <div className="relative mx-auto flex min-h-[720px] max-w-[1180px] items-center px-5 py-16 md:px-0">
+        <div className="relative mx-auto flex min-h-[660px] max-w-[1180px] items-center px-5 pt-14 pb-24 md:min-h-[720px] md:px-0 md:py-16">
           <div className="max-w-[650px]">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-4 py-2 text-[13px] font-bold backdrop-blur">
               <ICONS.ShieldCheck size={16} aria-hidden="true" />
               {slide.eyebrow} · 해충 박멸 · 방역 소독 · 물탱크 청소
             </span>
-            <h1 className="mt-7 whitespace-pre-line text-[42px] font-extrabold leading-[1.12] tracking-normal md:text-[70px]">
+            <h1 className="mt-6 whitespace-pre-line text-[36px] font-extrabold leading-[1.14] tracking-normal sm:text-[42px] md:mt-7 md:text-[70px]">
               {slide.title}
             </h1>
-            <p className="mt-6 max-w-[560px] text-[17px] leading-[1.78] text-white/82 md:text-[19px]">
+            <p className="mt-5 max-w-[560px] text-[15.5px] leading-[1.76] text-white/84 md:mt-6 md:text-[19px]">
               {slide.desc}
             </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/contact" className="rounded-full border border-[#63a87f] bg-[#4a8a68] px-7 py-4 text-[15.5px] font-extrabold text-white shadow-xl shadow-black/20 transition hover:bg-[#3f775a]">
+            <div className="mt-7 grid max-w-[340px] gap-3 sm:flex sm:max-w-none sm:flex-wrap md:mt-9">
+              <Link href="/contact" className="rounded-full border border-[#63a87f] bg-[#4a8a68] px-7 py-3.5 text-center text-[15px] font-extrabold text-white shadow-xl shadow-black/20 transition hover:bg-[#3f775a] md:py-4 md:text-[15.5px]">
                 무료 진단 신청
               </Link>
-              <a href={SITE.phoneHref} className="rounded-full border border-white/40 bg-white/10 px-7 py-4 text-[15.5px] font-bold text-white backdrop-blur transition hover:bg-white/20">
+              <a href={SITE.phoneHref} className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-center text-[15px] font-bold text-white backdrop-blur transition hover:bg-white/20 md:py-4 md:text-[15.5px]">
                 전화 상담 {SITE.phoneDisplay}
               </a>
             </div>
-            <div className="mt-10 flex gap-3" aria-label="메인 히어로 슬라이드 선택">
+            <div className="mt-8 flex gap-3 md:mt-10" aria-label="메인 히어로 슬라이드 선택">
               {heroSlides.map((item, index) => (
                 <button
                   key={item.image}

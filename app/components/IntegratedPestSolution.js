@@ -49,7 +49,7 @@ const processSteps = [
 export default function IntegratedPestSolution() {
   return (
     <section className="bg-white">
-      <div className="relative overflow-hidden bg-[#07142a] px-5 py-16 text-white md:px-14 md:py-24">
+      <div className="relative overflow-hidden bg-[#07142a] px-5 py-14 text-white md:px-14 md:py-24">
         <Image
           src="/images/home/hero-science-inspection.png"
           alt=""
@@ -61,12 +61,12 @@ export default function IntegratedPestSolution() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,20,42,0.86),rgba(7,20,42,0.98))]" />
         <div className="relative mx-auto max-w-[1180px] text-center">
           <p className="text-[15px] font-extrabold text-red-400">오늘, 지금 확인해야 하는 이유</p>
-          <h2 className="mt-4 text-[34px] font-extrabold leading-[1.22] tracking-normal md:text-[56px]">
+          <h2 className="mt-4 text-[30px] font-extrabold leading-[1.26] tracking-normal sm:text-[34px] md:text-[56px]">
             해충은 보이는 순간보다
             <br />
             숨어 번식하는 시간이 더 위험합니다.
           </h2>
-          <p className="mx-auto mt-6 max-w-[720px] text-[17px] leading-[1.8] text-white/74">
+          <p className="mx-auto mt-5 max-w-[720px] text-[15.5px] leading-[1.82] text-white/76 md:mt-6 md:text-[17px]">
             한 번 나타난 해충은 단순 퇴치보다 원인 진단이 중요합니다. 한국방역환경은 침입 경로와 서식 환경을 먼저 확인해
             재발 가능성을 줄이는 통합 방제 솔루션을 제안합니다.
           </p>
@@ -79,7 +79,7 @@ export default function IntegratedPestSolution() {
                     <Icon size={29} strokeWidth={1.7} aria-hidden="true" />
                   </span>
                   <p className="mt-6 text-[15px] font-extrabold text-red-300">{item.title}</p>
-                  <h3 className="mt-2 text-[22px] font-extrabold leading-snug text-white">{item.headline}</h3>
+                  <h3 className="mt-2 text-[20px] font-extrabold leading-snug text-white md:text-[22px]">{item.headline}</h3>
                   <p className="mt-4 text-[14px] leading-relaxed text-white/64">{item.desc}</p>
                 </article>
               )
@@ -88,10 +88,10 @@ export default function IntegratedPestSolution() {
         </div>
       </div>
 
-      <div className="bg-[#eef6fb] px-5 py-16 md:px-14 md:py-24">
+      <div className="bg-[#eef6fb] px-5 py-14 md:px-14 md:py-24">
         <div className="mx-auto max-w-[1180px]">
           <div className="text-center">
-            <h2 className="text-[31px] font-extrabold leading-[1.28] text-deep md:text-[46px]">
+            <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep sm:text-[31px] md:text-[46px]">
               문제 해충은 어디에서 들어올까요?
             </h2>
             <p className="mx-auto mt-4 max-w-[760px] text-[16px] leading-[1.8] text-body3">
@@ -111,11 +111,11 @@ export default function IntegratedPestSolution() {
         </div>
       </div>
 
-      <div className="px-5 py-16 md:px-14 md:py-24">
+      <div className="px-5 py-14 md:px-14 md:py-24">
         <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="text-[14px] font-extrabold text-primary">왜 다시 생길까요?</p>
-            <h2 className="mt-3 text-[31px] font-extrabold leading-[1.25] text-deep md:text-[46px]">
+            <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep sm:text-[31px] md:text-[46px]">
               한 번 없앴는데도
               <br />
               다시 보인다면 원인은 남아 있습니다.
@@ -125,7 +125,7 @@ export default function IntegratedPestSolution() {
             </p>
             <div className="mt-8 grid gap-3">
               {recurrenceReasons.map((reason) => (
-                <div key={reason} className="rounded-[8px] border border-hairline bg-tint p-5 text-[17px] font-extrabold text-deep">
+                <div key={reason} className="rounded-[8px] border border-hairline bg-tint p-5 text-[15.5px] font-extrabold leading-relaxed text-deep md:text-[17px]">
                   {reason}
                 </div>
               ))}
@@ -148,11 +148,11 @@ export default function IntegratedPestSolution() {
         </div>
       </div>
 
-      <div className="bg-[#f7faf7] px-5 py-16 md:px-14 md:py-24">
+      <div className="bg-[#f7faf7] px-5 py-14 md:px-14 md:py-24">
         <div className="mx-auto max-w-[1180px]">
           <div className="text-center">
             <p className="text-[14px] font-extrabold text-primary">한국방역환경의 통합 방제</p>
-            <h2 className="mt-3 text-[31px] font-extrabold leading-[1.28] text-deep md:text-[46px]">
+            <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep sm:text-[31px] md:text-[46px]">
               상담부터 사후 안내까지
               <br />
               한 흐름으로 관리합니다.
@@ -162,16 +162,16 @@ export default function IntegratedPestSolution() {
             {processSteps.map(([no, title, desc]) => (
               <article key={no} className="rounded-[8px] border border-hairline bg-white p-6 shadow-xl shadow-deep/5">
                 <span className="text-[38px] font-extrabold text-primary/22">{no}</span>
-                <h3 className="mt-4 text-[22px] font-extrabold text-deep">{title}</h3>
+                <h3 className="mt-4 text-[20px] font-extrabold leading-snug text-deep md:text-[22px]">{title}</h3>
                 <p className="mt-3 text-[14px] leading-relaxed text-body3">{desc}</p>
               </article>
             ))}
           </div>
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-signature btn-primary px-7 py-4 text-[15px] font-extrabold">
+          <div className="mt-10 grid gap-3 sm:flex sm:flex-wrap sm:justify-center">
+            <Link href="/contact" className="btn-signature btn-primary px-7 py-3.5 text-center text-[15px] font-extrabold md:py-4">
               무료진단 신청
             </Link>
-            <a href={SITE.phoneHref} className="btn-signature border border-hairline-soft2 bg-white px-7 py-4 text-[15px] font-extrabold text-deep transition hover:bg-tint">
+            <a href={SITE.phoneHref} className="btn-signature border border-hairline-soft2 bg-white px-7 py-3.5 text-center text-[15px] font-extrabold text-deep transition hover:bg-tint md:py-4">
               전화 상담 {SITE.phoneDisplay}
             </a>
           </div>
