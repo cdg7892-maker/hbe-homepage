@@ -9,9 +9,9 @@ import { ICONS } from "../lib/icons"
 const serviceImages = {
   roach: "/images/home/premium-kitchen-inspection.png",
   rat: "/images/home/premium-rodent-control.png",
-  "flying-insect": "/images/home/hero-sanitation-tech.png",
+  "flying-insect": "/images/home/inspection-checklist.png",
   disinfection: "/images/home/premium-disinfection-service.png",
-  "air-quality": "/images/home/inspection-checklist.png",
+  "air-quality": "/images/home/premium-consultation.png",
   mattress: "/images/home/home-bedroom-inspection.png",
   "water-tank": "/images/home/premium-water-tank-service.png",
 }

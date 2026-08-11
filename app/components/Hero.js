@@ -72,22 +72,29 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="rounded-[8px] border border-white/20 bg-white/12 p-4 shadow-2xl shadow-black/20 backdrop-blur-md">
-            <div className="rounded-[8px] bg-white p-3">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[8px]">
-                <Image
-                  src="/images/home/premium-consultation.png"
-                  alt="방역 전문가가 현장 진단 결과를 고객에게 설명하는 모습"
-                  fill
-                  sizes="390px"
-                  className="object-cover object-[48%_45%]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-deep/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-[13px] font-extrabold text-white">상담부터 현장 진단까지</p>
-                  <p className="mt-1 text-[21px] font-extrabold leading-tight text-white">공간에 맞춘 방역 계획</p>
+          <div className="rounded-[8px] border border-white/20 bg-deep/72 p-6 shadow-2xl shadow-black/20 backdrop-blur-md">
+            <p className="text-[13px] font-extrabold text-on-primary-muted">무료 현장 진단 프로세스</p>
+            <h2 className="mt-3 text-[28px] font-extrabold leading-tight text-white">
+              문의하면 바로 확인할
+              <br />
+              핵심 항목입니다.
+            </h2>
+            <div className="mt-6 grid gap-3">
+              {[
+                ["01", "침입 경로 확인", "배수구, 틈새, 외부 유입 지점 점검"],
+                ["02", "맞춤 방제 제안", "가정/매장/시설별 작업 범위 안내"],
+                ["03", "사후 관리 안내", "재발 가능 지점과 관리 주기 상담"],
+              ].map(([step, title, desc]) => (
+                <div key={step} className="grid grid-cols-[42px_1fr] gap-3 rounded-[8px] border border-white/14 bg-white/10 p-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-white text-[13px] font-extrabold text-primary">
+                    {step}
+                  </span>
+                  <span>
+                    <strong className="block text-[15px] font-extrabold text-white">{title}</strong>
+                    <span className="mt-1 block text-[12px] leading-relaxed text-white/66">{desc}</span>
+                  </span>
                 </div>
-              </div>
+              ))}
             </div>
             <div className="mt-4 grid grid-cols-2 gap-2">
               {["바퀴벌레 박멸", "쥐 방제", "코로나 소독", "물탱크 청소"].map((item) => (
@@ -96,9 +103,10 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-[13px] leading-relaxed text-white/74">
-              실제 서비스 범위와 지역 방역 경력을 기반으로 상담부터 현장 관리까지 안내합니다.
-            </p>
+            <a href={SITE.phoneHref} className="mt-5 flex items-center justify-between rounded-[8px] bg-white px-5 py-4 text-[15px] font-extrabold text-deep transition hover:brightness-95">
+              전화 상담 {SITE.phoneDisplay}
+              <ICONS.Phone size={18} aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>
