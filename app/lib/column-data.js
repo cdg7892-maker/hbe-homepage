@@ -1,6 +1,6 @@
 export const COLUMN_CATEGORIES = ["전체", "강진 로컬", "업종별 방역", "해충 관리", "매장 위생", "방역 소독", "물탱크 위생", "계절 방제"]
 
-export const COLUMN_DATA = [
+const RAW_COLUMN_DATA = [
   {
     slug: "gangjineup-pest-control-company",
     category: "강진 로컬",
@@ -2048,6 +2048,198 @@ export const COLUMN_DATA = [
     ],
   },
 ]
+
+const COMMON_CONVERSION_FAQS = [
+  {
+    question: "비용이 너무 많이 나오면 어떡하나요?",
+    answer:
+      "현장마다 면적, 발생 위치, 반복 여부가 달라 전화 한 통으로 무조건 같은 금액을 말하기는 어렵습니다. 대신 상담 때 공간 용도와 발견 위치를 먼저 확인하고, 불필요한 작업보다 지금 필요한 범위부터 안내합니다.",
+  },
+  {
+    question: "대충 약만 뿌리고 가는 곳은 아닌지 어떻게 확인하나요?",
+    answer:
+      "좋은 방역은 약제 처리 전에 원인을 설명할 수 있어야 합니다. 상담과 현장 확인에서 유입 경로, 서식 가능 지점, 재발 조건, 작업 후 관리 방법을 묻고 답할 수 있는지 확인하는 것이 좋습니다.",
+  },
+  {
+    question: "작업하고도 또 나오면 어떻게 하나요?",
+    answer:
+      "해충은 외부 유입과 생활 환경의 영향을 받기 때문에 재발 가능성을 0으로 단정할 수는 없습니다. 그래서 작업 후 청소, 보관, 환기, 틈새 관리 같은 재점검 포인트를 함께 안내받아야 합니다.",
+  },
+  {
+    question: "전화하기 전에 무엇을 준비하면 상담이 빨라지나요?",
+    answer:
+      "발견 위치, 발견 시간대, 반복 횟수, 공간 용도, 사진 유무, 방문 가능한 시간을 알려주면 좋습니다. 물탱크청소는 탱크 위치와 최근 청소 시기도 함께 알려주면 상담이 정확해집니다.",
+  },
+  {
+    question: "현장에 꼭 방문해야만 알 수 있나요?",
+    answer:
+      "사진과 설명만으로 1차 상담은 가능하지만, 실제 원인은 배수구 안쪽, 설비 뒤, 벽면 틈, 창고 적재 공간처럼 사진 밖에 있을 수 있습니다. 반복 발생이라면 현장 확인이 더 정확합니다.",
+  },
+  {
+    question: "작업 시간은 얼마나 걸리나요?",
+    answer:
+      "공간 크기, 작업 범위, 해충 종류, 물탱크 접근 조건에 따라 달라집니다. 영업장이나 시설은 영업 종료 후, 브레이크 타임, 휴무일처럼 운영에 부담이 적은 시간으로 조율하는 것이 좋습니다.",
+  },
+  {
+    question: "작업 후 바로 이용해도 되나요?",
+    answer:
+      "작업 방식과 공간 상태에 따라 환기 시간과 이용 재개 기준이 달라집니다. 현장에서 어떤 표면을 닦아야 하는지, 어떤 구역은 유지해야 하는지 안내받는 것이 중요합니다.",
+  },
+]
+
+const FAQ_LIBRARY = {
+  roach: [
+    {
+      question: "바퀴벌레 한 마리만 봐도 안쪽에 더 숨어 있을 수 있나요?",
+      answer:
+        "가능성이 있습니다. 특히 낮에 보였거나 같은 위치에서 반복된다면 싱크대 하부, 배수구, 냉장고 뒤, 박스 보관 공간에 흔적이 있는지 확인하는 것이 좋습니다.",
+    },
+    {
+      question: "알집이 남아 있으면 며칠 뒤 다시 나오나요?",
+      answer:
+        "알집이나 은신처가 남아 있으면 시간이 지나 다시 보일 수 있습니다. 그래서 보이는 개체만 처리하지 말고 배설 흔적, 작은 개체, 은신 가능 지점을 함께 봐야 합니다.",
+    },
+    {
+      question: "직접 산 약을 뿌렸는데도 다시 나오는 이유는 뭔가요?",
+      answer:
+        "약제가 닿지 않는 은신처나 유입 경로가 남아 있으면 반복될 수 있습니다. 물기, 음식물 잔여물, 박스 보관, 배수구 틈새 같은 재발 조건을 함께 줄여야 합니다.",
+    },
+  ],
+  rodent: [
+    {
+      question: "쥐를 직접 보지 못하고 배설물만 있어도 점검해야 하나요?",
+      answer:
+        "배설물, 갉은 흔적, 냄새, 천장 소리는 이동 경로를 추정하는 단서입니다. 반복 흔적이라면 실제 개체를 보지 못했더라도 점검을 권합니다.",
+    },
+    {
+      question: "쥐약이나 포획틀만 두면 해결되나요?",
+      answer:
+        "포획은 일부 해결책일 뿐입니다. 문 하부, 배관 틈, 벽면 구멍, 먹이 보관 상태가 그대로이면 다른 개체가 다시 들어올 수 있습니다.",
+    },
+    {
+      question: "창고나 식당에서 쥐가 다시 나타나는 가장 흔한 이유는 무엇인가요?",
+      answer:
+        "먹이원과 은신처가 남아 있기 때문입니다. 식재료, 사료, 음식물 쓰레기, 오래된 박스, 벽면에 붙은 적재물은 쥐가 머물 조건이 될 수 있습니다.",
+    },
+  ],
+  water: [
+    {
+      question: "물이 맑아 보여도 물탱크청소가 필요한가요?",
+      answer:
+        "물 색만으로 내부 상태를 판단하기 어렵습니다. 바닥 침전물, 벽면 물때, 뚜껑 밀폐 상태, 유입 배관 주변 오염은 외부에서 바로 보이지 않을 수 있습니다.",
+    },
+    {
+      question: "물탱크청소 전후 사진은 왜 중요한가요?",
+      answer:
+        "저수조 내부는 관리자가 평소 확인하기 어렵기 때문에 작업 전후 사진이 상태 확인과 다음 점검 주기 판단에 도움이 됩니다.",
+    },
+    {
+      question: "청소 주기는 어떻게 판단해야 하나요?",
+      answer:
+        "시설 종류, 사용량, 관련 법령, 탱크 구조, 최근 청소 시기에 따라 달라질 수 있습니다. 현재 시설 조건을 기준으로 확인하는 것이 좋습니다.",
+    },
+  ],
+  disinfection: [
+    {
+      question: "소독은 넓게 뿌리면 더 좋은가요?",
+      answer:
+        "무조건 넓게 뿌리는 것보다 손이 자주 닿는 접촉면과 이용 패턴을 기준으로 계획하는 것이 중요합니다. 손잡이, 테이블, 스위치, 화장실, 공용 비품을 우선 봅니다.",
+    },
+    {
+      question: "아이들이나 반려동물이 있는 공간도 소독할 수 있나요?",
+      answer:
+        "가능하지만 작업 위치, 환기 시간, 접근 주의 구역 안내가 더 중요합니다. 작업 전 생활용품과 식기, 반려동물 용품은 분리해 두는 것이 좋습니다.",
+    },
+    {
+      question: "소독 후 냄새나 잔여감이 걱정되면 어떻게 하나요?",
+      answer:
+        "작업 방식에 따라 환기와 표면 관리 기준이 다릅니다. 상담 단계에서 이용자 특성과 운영 시간을 알려주고, 작업 후 환기 기준을 안내받는 것이 좋습니다.",
+    },
+  ],
+  restaurant: [
+    {
+      question: "영업을 쉬지 않고 방역이나 소독을 받을 수 있나요?",
+      answer:
+        "작업 범위에 따라 다르지만 보통 영업 종료 후, 브레이크 타임, 휴무일을 기준으로 조율합니다. 식재료 보호와 환기 시간을 함께 고려해야 합니다.",
+    },
+    {
+      question: "손님이 보기 전에 빨리 처리할 수 있나요?",
+      answer:
+        "초기 상담에서 발견 위치와 영업 시간을 알려주면 우선 확인이 필요한 범위를 빠르게 좁힐 수 있습니다. 다만 원인 진단 없이 급하게 분무만 하면 재발 가능성이 남습니다.",
+    },
+    {
+      question: "식당은 작업 후 식재료를 어떻게 관리해야 하나요?",
+      answer:
+        "작업 전에는 식재료와 조리도구를 밀폐하거나 분리 보관하고, 작업 후에는 안내받은 환기 시간과 표면 관리 기준에 따라 정리하는 것이 좋습니다.",
+    },
+  ],
+  local: [
+    {
+      question: "강진군 읍·면 지역도 상담이 가능한가요?",
+      answer:
+        "강진읍을 중심으로 마량면, 군동면, 칠량면, 대구면, 도암면, 성전면, 병영면 등 강진군 지역 상담이 가능합니다. 일정은 위치와 작업 범위에 따라 조율됩니다.",
+    },
+    {
+      question: "지역이 멀면 출장비가 따로 생기나요?",
+      answer:
+        "위치, 작업 범위, 방문 일정에 따라 안내가 달라질 수 있습니다. 상담 때 주소나 읍·면명, 작업 내용을 알려주시면 필요한 비용 범위를 함께 안내합니다.",
+    },
+    {
+      question: "사진만 보내도 1차 상담이 가능한가요?",
+      answer:
+        "사진은 초기 판단에 도움이 됩니다. 다만 실제 원인은 배수구 내부, 설비 뒤, 외부 틈새처럼 사진에 보이지 않는 곳에 있을 수 있어 반복 문제는 현장 확인이 더 정확합니다.",
+    },
+  ],
+}
+
+function getFaqTopic(column) {
+  const text = `${column.title} ${column.excerpt} ${column.tags?.join(" ") ?? ""}`
+  if (text.includes("물탱크") || text.includes("저수조")) return "water"
+  if (text.includes("쥐")) return "rodent"
+  if (text.includes("바퀴벌레")) return "roach"
+  if (text.includes("식당") || text.includes("음식점") || text.includes("카페")) return "restaurant"
+  if (text.includes("소독") || text.includes("어린이집") || text.includes("학원") || text.includes("숙박")) return "disinfection"
+  if (text.includes("강진") || text.includes("면") || text.includes("읍")) return "local"
+  return "disinfection"
+}
+
+function getContextualFaqs(column) {
+  const topic = getFaqTopic(column)
+  const topicFaqs = FAQ_LIBRARY[topic] ?? []
+  const localFaqs = topic === "local" ? [] : FAQ_LIBRARY.local
+
+  return [
+    ...topicFaqs,
+    ...COMMON_CONVERSION_FAQS,
+    ...localFaqs,
+    {
+      question: `${column.title} 상담은 어떤 순서로 진행되나요?`,
+      answer:
+        "먼저 전화로 공간 용도, 발생 위치, 반복 여부, 사진 유무를 확인합니다. 이후 필요한 경우 현장에서 원인과 작업 범위를 확인하고, 작업 후 관리 방법을 안내합니다.",
+    },
+    {
+      question: "한국방역환경에 맡기기 전에 무엇을 확인하면 좋나요?",
+      answer:
+        "업체가 원인과 작업 범위를 설명하는지, 작업 후 환기와 사후 관리 기준을 안내하는지, 불필요한 작업을 권하기보다 현재 필요한 범위를 먼저 말하는지 확인하는 것이 좋습니다.",
+    },
+  ]
+}
+
+function withExpandedFaqs(column) {
+  const seen = new Set()
+  const faqs = [...(column.faqs ?? []), ...getContextualFaqs(column)].filter((faq) => {
+    if (seen.has(faq.question)) return false
+    seen.add(faq.question)
+    return true
+  })
+
+  return {
+    ...column,
+    faqs: faqs.slice(0, 10),
+  }
+}
+
+export const COLUMN_DATA = RAW_COLUMN_DATA.map(withExpandedFaqs)
 
 export function getColumnBySlug(slug) {
   return COLUMN_DATA.find((column) => column.slug === slug)

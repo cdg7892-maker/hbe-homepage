@@ -184,12 +184,21 @@ export default async function BlogDetailPage({ params }) {
                     <HelpCircle size={26} className="text-primary" aria-hidden="true" />
                     자주 묻는 질문
                   </h2>
-                  <div className="mt-6 divide-y divide-hairline rounded-[8px] bg-white">
-                    {column.faqs.map((faq) => (
-                      <div key={faq.question} className="p-5 md:p-6">
-                        <h3 className="text-[18px] font-extrabold leading-[1.45] text-deep">{faq.question}</h3>
-                        <p className="mt-3 text-[15px] leading-[1.85] text-body3">{faq.answer}</p>
-                      </div>
+                  <div className="mt-6 grid gap-3">
+                    {column.faqs.map((faq, index) => (
+                      <details
+                        key={faq.question}
+                        open={index < 3}
+                        className="group rounded-[8px] border border-hairline bg-white p-5 shadow-sm shadow-deep/4"
+                      >
+                        <summary className="cursor-pointer list-none text-[17px] font-extrabold leading-[1.45] text-deep marker:hidden">
+                          <span className="inline-flex min-h-[28px] items-start gap-3">
+                            <span className="mt-0.5 shrink-0 text-[13px] font-extrabold text-primary">Q{index + 1}</span>
+                            <span>{faq.question}</span>
+                          </span>
+                        </summary>
+                        <p className="mt-4 border-t border-hairline pt-4 text-[15px] leading-[1.85] text-body3">{faq.answer}</p>
+                      </details>
                     ))}
                   </div>
                 </section>
