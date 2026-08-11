@@ -45,6 +45,7 @@ export default async function BlogDetailPage({ params }) {
   }
 
   const relatedColumns = getRelatedColumns(column.slug, 3)
+  const persuasion = column.persuasion
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -126,9 +127,22 @@ export default async function BlogDetailPage({ params }) {
               <div className="rounded-[8px] border border-hairline bg-offwhite p-6">
                 <h2 className="text-[18px] font-extrabold text-deep">목차</h2>
                 <nav className="mt-4 grid gap-3 text-[14px] font-bold leading-relaxed text-body3">
+                  {[
+                    ["search-worries", "검색자가 느끼는 불안"],
+                    ["yes-set", "YES 세트"],
+                    ["instinct", "본능 분석"],
+                    ["objections", "맡기기 전 의심 제거"],
+                    ["proof", "숫자와 근거"],
+                    ["field-process", "현장 기준"],
+                    ["faq", "자주 묻는 질문"],
+                  ].map(([id, label], index) => (
+                    <a key={id} href={`#${id}`} className="transition hover:text-primary">
+                      {index + 1}. {label}
+                    </a>
+                  ))}
                   {column.sections.map((section, index) => (
                     <a key={section.heading} href={`#section-${index + 1}`} className="transition hover:text-primary">
-                      {index + 1}. {section.heading}
+                      {index + 8}. {section.heading}
                     </a>
                   ))}
                 </nav>
@@ -136,13 +150,57 @@ export default async function BlogDetailPage({ params }) {
             </aside>
 
             <div>
-              <section className="rounded-[8px] border border-hairline bg-tint p-6 md:p-8">
-                <h2 className="flex items-center gap-2 text-[22px] font-extrabold text-deep">
-                  <ShieldCheck size={23} className="text-primary" aria-hidden="true" />
-                  먼저 확인할 핵심
+              <section id="search-worries" className="scroll-mt-28 rounded-[8px] border border-hairline bg-[#07142a] p-6 text-white shadow-2xl shadow-deep/10 md:p-8">
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-white/58">Search Intent</p>
+                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.32] md:text-[38px]">이 글을 찾으셨다면, 아마 이런 생각부터 드셨을 겁니다.</h2>
+                <div className="mt-6 grid gap-3">
+                  {persuasion.worries.map((item) => (
+                    <p key={item} className="rounded-[8px] bg-white/10 p-4 text-[18px] font-extrabold leading-relaxed text-white">
+                      "{item}"
+                    </p>
+                  ))}
+                </div>
+              </section>
+
+              <section id="yes-set" className="mt-8 scroll-mt-28 rounded-[8px] border border-hairline bg-tint p-6 md:p-8">
+                <h2 className="flex items-center gap-2 text-[24px] font-extrabold text-deep">
+                  <ShieldCheck size={24} className="text-primary" aria-hidden="true" />
+                  먼저 고개가 끄덕여지는 사실
                 </h2>
                 <div className="mt-5 grid gap-3">
-                  {column.summary.map((item) => (
+                  {persuasion.yesSet.map((item) => (
+                    <div key={item} className="flex gap-3 rounded-[8px] bg-white p-4">
+                      <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                      <p className="text-[15px] font-semibold leading-relaxed text-deep">{item}</p>
+                    </div>
+                  ))}
+                </div>
+                </section>
+
+              <section id="instinct" className="mt-10 scroll-mt-28">
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">왜 이렇게 불안하게 느껴질까요?</h2>
+                <p className="mt-5 text-[18px] leading-[1.95] text-body3">{persuasion.instinct}</p>
+                <p className="mt-5 rounded-[8px] border-l-4 border-primary bg-offwhite p-5 text-[17px] font-bold leading-[1.85] text-deep">
+                  {persuasion.bridge}
+                </p>
+              </section>
+
+              <section id="objections" className="mt-12 scroll-mt-28 rounded-[8px] border border-hairline bg-white p-6 shadow-xl shadow-deep/5 md:p-8">
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">업체에 맡기기 전 생기는 의심을 먼저 지웁니다</h2>
+                <div className="mt-6 grid gap-4">
+                  {persuasion.objections.map((item) => (
+                    <div key={item.concern} className="rounded-[8px] border border-hairline bg-offwhite p-5">
+                      <h3 className="text-[19px] font-extrabold text-deep">"{item.concern}"</h3>
+                      <p className="mt-3 text-[15.5px] leading-[1.85] text-body3">{item.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="proof" className="mt-12 scroll-mt-28 rounded-[8px] border border-primary/20 bg-tint p-6 md:p-8">
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">형용사 대신 확인 가능한 숫자와 근거</h2>
+                <div className="mt-6 grid gap-3">
+                  {persuasion.proofPoints.map((item) => (
                     <div key={item} className="flex gap-3 rounded-[8px] bg-white p-4">
                       <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
                       <p className="text-[15px] font-semibold leading-relaxed text-deep">{item}</p>
@@ -151,19 +209,17 @@ export default async function BlogDetailPage({ params }) {
                 </div>
               </section>
 
-              {column.recommendedFor?.length ? (
-                <section className="mt-6 rounded-[8px] border border-primary/20 bg-white p-6 shadow-xl shadow-deep/5 md:p-8">
-                  <h2 className="text-[22px] font-extrabold text-deep">이런 상황이라면 상담을 권합니다</h2>
-                  <div className="mt-5 grid gap-3">
-                    {column.recommendedFor.map((item) => (
-                      <div key={item} className="flex gap-3 rounded-[8px] bg-offwhite p-4">
-                        <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
-                        <p className="text-[15px] font-semibold leading-relaxed text-deep">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-              ) : null}
+              <section id="field-process" className="mt-12 scroll-mt-28">
+                <h2 className="text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">현장에서는 이 순서로 확인합니다</h2>
+                <div className="mt-6 grid gap-3 md:grid-cols-2">
+                  {persuasion.fieldProcess.map((item, index) => (
+                    <div key={item} className="rounded-[8px] border border-hairline bg-white p-5 shadow-sm shadow-deep/4">
+                      <p className="text-[13px] font-extrabold text-primary">STEP {index + 1}</p>
+                      <p className="mt-2 text-[17px] font-extrabold leading-[1.55] text-deep">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
 
               <div className="mt-10 space-y-12">
                 {column.sections.map((section, index) => (
@@ -179,7 +235,7 @@ export default async function BlogDetailPage({ params }) {
               </div>
 
               {column.faqs?.length ? (
-                <section className="mt-12 rounded-[8px] border border-hairline bg-offwhite p-6 md:p-8">
+                <section id="faq" className="mt-12 scroll-mt-28 rounded-[8px] border border-hairline bg-offwhite p-6 md:p-8">
                   <h2 className="flex items-center gap-2 text-[26px] font-extrabold text-deep md:text-[34px]">
                     <HelpCircle size={26} className="text-primary" aria-hidden="true" />
                     자주 묻는 질문
@@ -214,7 +270,7 @@ export default async function BlogDetailPage({ params }) {
                       직접 확인하는 편이 빠릅니다.
                     </h2>
                     <p className="mt-4 text-[15px] leading-relaxed text-white/70">
-                      같은 증상처럼 보여도 공간 구조와 유입 경로에 따라 필요한 조치가 달라집니다.
+                      {persuasion.cta}
                     </p>
                   </div>
                   <div className="grid gap-3">
