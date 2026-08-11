@@ -24,6 +24,7 @@ export const NAV_ITEMS = [
   { label: "회사소개", href: "/about" },
   { label: "서비스", href: "/services" },
   { label: "시공사례", href: "/cases" },
+  { label: "방역칼럼", href: "/blog" },
   { label: "고객센터", href: "/support" },
   { label: "상담문의", href: "/contact" },
 ]

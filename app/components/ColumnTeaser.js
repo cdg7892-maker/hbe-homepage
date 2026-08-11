@@ -1,6 +1,9 @@
 import { COLUMN_DATA } from "../lib/column-data"
+import Link from "next/link"
 
 export default function ColumnTeaser() {
+  const featuredColumns = COLUMN_DATA.slice(0, 3)
+
   return (
     <section className="bg-white px-5 py-16 md:px-14 md:py-24">
       <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[270px_1fr] lg:items-center">
@@ -18,15 +21,16 @@ export default function ColumnTeaser() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {COLUMN_DATA.map((c, index) => (
-            <article
+          {featuredColumns.map((c, index) => (
+            <Link
               key={c.title}
+              href={`/blog/${c.slug}`}
               className="flex aspect-square flex-col items-center justify-center rounded-full border-2 border-primary bg-white px-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
             >
               <p className="text-[12px] font-extrabold text-primary">HBE COLUMN Vol.0{index + 1}</p>
               <h3 className="mt-5 text-[18px] font-extrabold leading-[1.45] text-deep">{c.title}</h3>
               <span className="mt-5 h-[8px] w-[72%] bg-primary/16" />
-            </article>
+            </Link>
           ))}
         </div>
       </div>
