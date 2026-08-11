@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowLeft, CalendarDays, CheckCircle2, Clock3, Phone, ShieldCheck } from "lucide-react"
+import { ArrowLeft, CalendarDays, CheckCircle2, Clock3, ExternalLink, HelpCircle, Phone, ShieldCheck } from "lucide-react"
 import { COLUMN_DATA, getColumnBySlug, getRelatedColumns } from "../../lib/column-data"
 import { SITE } from "../../lib/site"
 import { SITE_URL } from "../../lib/config"
@@ -61,10 +61,25 @@ export default async function BlogDetailPage({ params }) {
     },
     mainEntityOfPage: `${SITE_URL}/blog/${column.slug}`,
   }
+  const faqJsonLd = column.faqs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: column.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      }
+    : null
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      {faqJsonLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} /> : null}
       <article>
         <header className="bg-offwhite px-5 py-12 md:px-14 md:py-18">
           <div className="mx-auto max-w-[980px]">
@@ -136,6 +151,20 @@ export default async function BlogDetailPage({ params }) {
                 </div>
               </section>
 
+              {column.recommendedFor?.length ? (
+                <section className="mt-6 rounded-[8px] border border-primary/20 bg-white p-6 shadow-xl shadow-deep/5 md:p-8">
+                  <h2 className="text-[22px] font-extrabold text-deep">이런 상황이라면 상담을 권합니다</h2>
+                  <div className="mt-5 grid gap-3">
+                    {column.recommendedFor.map((item) => (
+                      <div key={item} className="flex gap-3 rounded-[8px] bg-offwhite p-4">
+                        <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-primary" aria-hidden="true" />
+                        <p className="text-[15px] font-semibold leading-relaxed text-deep">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
               <div className="mt-10 space-y-12">
                 {column.sections.map((section, index) => (
                   <section key={section.heading} id={`section-${index + 1}`} className="scroll-mt-28">
@@ -148,6 +177,23 @@ export default async function BlogDetailPage({ params }) {
                   </section>
                 ))}
               </div>
+
+              {column.faqs?.length ? (
+                <section className="mt-12 rounded-[8px] border border-hairline bg-offwhite p-6 md:p-8">
+                  <h2 className="flex items-center gap-2 text-[26px] font-extrabold text-deep md:text-[34px]">
+                    <HelpCircle size={26} className="text-primary" aria-hidden="true" />
+                    자주 묻는 질문
+                  </h2>
+                  <div className="mt-6 divide-y divide-hairline rounded-[8px] bg-white">
+                    {column.faqs.map((faq) => (
+                      <div key={faq.question} className="p-5 md:p-6">
+                        <h3 className="text-[18px] font-extrabold leading-[1.45] text-deep">{faq.question}</h3>
+                        <p className="mt-3 text-[15px] leading-[1.85] text-body3">{faq.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
 
               <section className="mt-12 overflow-hidden rounded-[8px] bg-[#07142a] text-white">
                 <div className="grid gap-6 p-7 md:grid-cols-[1fr_auto] md:items-center md:p-9">
@@ -181,6 +227,25 @@ export default async function BlogDetailPage({ params }) {
                   강진군을 중심으로 해충방제, 방역소독, 물탱크 청소를 수행하는 지역 밀착 방역 전문업체입니다. 현장에서 반복되는
                   질문을 기준으로 실질적인 관리 기준을 정리합니다.
                 </p>
+                {column.sourceLinks?.length ? (
+                  <div className="mt-6 border-t border-hairline pt-5">
+                    <p className="text-[13px] font-extrabold text-body2">참고한 공공자료</p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {column.sourceLinks.map((source) => (
+                        <a
+                          key={source.href}
+                          href={source.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-hairline bg-white px-3 py-2 text-[12px] font-extrabold text-body3 transition hover:border-primary hover:text-primary"
+                        >
+                          {source.label}
+                          <ExternalLink size={13} aria-hidden="true" />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </footer>
             </div>
 
