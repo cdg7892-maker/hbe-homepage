@@ -46,6 +46,7 @@ export default async function BlogDetailPage({ params }) {
 
   const relatedColumns = getRelatedColumns(column.slug, 3)
   const persuasion = column.persuasion
+  const careModel = persuasion.careModel
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -134,6 +135,11 @@ export default async function BlogDetailPage({ params }) {
                     ["objections", "업체 선택 전 확인할 것"],
                     ["proof", "한국방역환경의 안내 기준"],
                     ["field-process", "현장 점검 순서"],
+                    ["core-solution", "핵심 관리 원리"],
+                    ["root-causes", "반복 원인"],
+                    ["personalized-care", "유형별 점검"],
+                    ["management-timeline", "관리 단계"],
+                    ["hbe-program", "관리 프로그램"],
                     ["faq", "자주 묻는 질문"],
                   ].map(([id, label], index) => (
                     <a key={id} href={`#${id}`} className="transition hover:text-primary">
@@ -142,7 +148,7 @@ export default async function BlogDetailPage({ params }) {
                   ))}
                   {column.sections.map((section, index) => (
                     <a key={section.heading} href={`#section-${index + 1}`} className="transition hover:text-primary">
-                      {index + 8}. {section.heading}
+                      {index + 13}. {section.heading}
                     </a>
                   ))}
                 </nav>
@@ -216,6 +222,97 @@ export default async function BlogDetailPage({ params }) {
                     <div key={item} className="rounded-[8px] border border-hairline bg-white p-5 shadow-sm shadow-deep/4">
                       <p className="text-[13px] font-extrabold text-primary">STEP {index + 1}</p>
                       <p className="mt-2 text-[17px] font-extrabold leading-[1.55] text-deep">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="core-solution" className="mt-12 scroll-mt-28 rounded-[8px] border border-hairline bg-[#07142a] p-6 text-white md:p-8">
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-white/58">Core Solution</p>
+                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] md:text-[38px]">{careModel.solutionTitle}</h2>
+                <p className="mt-4 max-w-[760px] text-[16px] leading-[1.85] text-white/72">{careModel.solutionIntro}</p>
+                <div className="mt-7 grid gap-4 md:grid-cols-2">
+                  {careModel.coreSolutions.map(([title, body], index) => (
+                    <div key={title} className="rounded-[8px] border border-white/12 bg-white/8 p-5">
+                      <p className="text-[13px] font-extrabold text-primary">0{index + 1}</p>
+                      <h3 className="mt-2 text-[20px] font-extrabold text-white">{title}</h3>
+                      <p className="mt-3 text-[14px] leading-[1.75] text-white/70">{body}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="root-causes" className="mt-12 scroll-mt-28">
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Root Causes</p>
+                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">문제가 반복되는 주요 원인</h2>
+                <p className="mt-4 text-[16px] leading-[1.85] text-body3">겉으로 보이는 증상보다, 같은 문제가 반복되는 환경을 찾는 것이 중요합니다.</p>
+                <div className="mt-6 grid gap-4 md:grid-cols-2">
+                  {careModel.rootCauses.map(([title, body], index) => (
+                    <div key={title} className="rounded-[8px] border border-hairline bg-white p-5 shadow-sm shadow-deep/4">
+                      <p className="text-[13px] font-extrabold text-primary">원인 {index + 1}</p>
+                      <h3 className="mt-2 text-[20px] font-extrabold text-deep">{title}</h3>
+                      <p className="mt-3 text-[14px] leading-[1.75] text-body3">{body}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="personalized-care" className="mt-12 scroll-mt-28 rounded-[8px] border border-hairline bg-offwhite p-6 md:p-8">
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Personalized Care</p>
+                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">유형별 맞춤 점검 기준</h2>
+                <p className="mt-4 text-[16px] leading-[1.85] text-body3">같은 문제처럼 보여도 공간의 구조와 이용 방식에 따라 확인 순서가 달라집니다.</p>
+                <div className="mt-7 grid gap-5">
+                  {careModel.personalizedCare.map((item, index) => (
+                    <article key={item.type} className="rounded-[8px] border border-hairline bg-white p-5 md:p-6">
+                      <div className="flex flex-wrap items-center gap-3">
+                        <span className="rounded-full bg-primary px-3 py-1.5 text-[12px] font-extrabold text-white">{index + 1}</span>
+                        <h3 className="text-[22px] font-extrabold text-deep">{item.type}</h3>
+                      </div>
+                      <div className="mt-5 grid gap-4 md:grid-cols-3">
+                        <div>
+                          <p className="text-[13px] font-extrabold text-primary">주요 신호</p>
+                          <ul className="mt-2 space-y-1.5 text-[14px] font-bold text-body3">
+                            {item.symptoms.map((symptom) => (
+                              <li key={symptom}>• {symptom}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <p className="text-[13px] font-extrabold text-primary">점검 패턴</p>
+                          <p className="mt-2 text-[14px] font-bold leading-[1.75] text-body3">{item.pattern}</p>
+                        </div>
+                        <div>
+                          <p className="text-[13px] font-extrabold text-primary">관리 방향</p>
+                          <p className="mt-2 text-[14px] font-bold leading-[1.75] text-body3">{item.solution}</p>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
+              <section id="management-timeline" className="mt-12 scroll-mt-28">
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">Management Timeline</p>
+                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">작업 후 관리는 이렇게 봅니다</h2>
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  {careModel.managementTimeline.map(([step, title, body]) => (
+                    <div key={step} className="rounded-[8px] border border-hairline bg-white p-5 shadow-sm shadow-deep/4">
+                      <p className="text-[13px] font-extrabold text-primary">{step}</p>
+                      <h3 className="mt-2 text-[20px] font-extrabold leading-[1.4] text-deep">{title}</h3>
+                      <p className="mt-3 text-[14px] leading-[1.75] text-body3">{body}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section id="hbe-program" className="mt-12 scroll-mt-28 rounded-[8px] border border-primary/20 bg-tint p-6 md:p-8">
+                <p className="text-[14px] font-extrabold uppercase tracking-[0.14em] text-primary">HBE Program</p>
+                <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] text-deep md:text-[38px]">한국방역환경 관리 프로그램</h2>
+                <div className="mt-6 grid gap-4 md:grid-cols-3">
+                  {careModel.hbeProgram.map(([title, body]) => (
+                    <div key={title} className="rounded-[8px] bg-white p-5">
+                      <h3 className="text-[20px] font-extrabold text-deep">{title}</h3>
+                      <p className="mt-3 text-[14px] leading-[1.75] text-body3">{body}</p>
                     </div>
                   ))}
                 </div>
