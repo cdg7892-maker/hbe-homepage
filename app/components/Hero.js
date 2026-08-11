@@ -3,7 +3,7 @@ import Link from "next/link"
 import { SITE } from "../lib/site"
 import { ICONS } from "../lib/icons"
 
-const keywordLinks = ["바퀴벌레", "쥐 방제", "날벌레", "가정집 비용", "물탱크 청소"]
+const keywordLinks = ["바퀴벌레", "쥐 방제", "소독", "물탱크 청소", "가정집 비용"]
 
 export default function Hero() {
   return (
@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative min-h-[680px] bg-deep text-white">
+      <div className="relative min-h-[720px] bg-deep text-white">
         <Image
           src="/images/home/hero-sanitation-tech.png"
           alt="전문 방역 기사가 깨끗한 매장 내부를 점검하는 모습"
@@ -44,15 +44,15 @@ export default function Hero() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,24,49,0.92)_0%,rgba(7,24,49,0.76)_38%,rgba(0,119,198,0.22)_66%,rgba(255,255,255,0.03)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,24,49,0.94)_0%,rgba(7,24,49,0.78)_38%,rgba(0,119,198,0.22)_66%,rgba(255,255,255,0.03)_100%)]" />
         <div className="absolute inset-y-0 left-0 hidden w-[54%] bg-primary/80 [clip-path:polygon(0_0,86%_0,100%_100%,0_100%)] lg:block" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
-        <div className="relative mx-auto flex min-h-[680px] max-w-[1180px] flex-col justify-center px-5 py-16 md:px-0">
+        <div className="relative mx-auto grid min-h-[720px] max-w-[1180px] gap-10 px-5 py-16 md:px-0 lg:grid-cols-[1fr_390px] lg:items-center">
           <div className="max-w-[650px]">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-4 py-2 text-[13px] font-bold backdrop-blur">
               <ICONS.ShieldCheck size={16} aria-hidden="true" />
-              감염병 예방 교육 이수 · 강진 방역 전문
+              해충 박멸 · 방역 소독 · 물탱크 청소 전문
             </span>
             <h1 className="mt-7 text-[42px] font-extrabold leading-[1.12] tracking-[-0.02em] md:text-[70px]">
               보이지 않는 문제까지
@@ -60,29 +60,40 @@ export default function Hero() {
               먼저 찾아냅니다
             </h1>
             <p className="mt-6 max-w-[560px] text-[17px] leading-[1.78] text-white/82 md:text-[19px]">
-              {SITE.companyName}은 해충 방제, 소독, 물탱크 청소까지 현장 진단을 바탕으로 공간에 맞는 해결책을 제안합니다.
+              {SITE.companyName}은 바퀴벌레, 쥐, 소독, 물탱크 청소까지 현장 진단을 바탕으로 공간에 맞는 해결책을 제안합니다.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href="/contact" className="rounded-full bg-white px-7 py-4 text-[15.5px] font-extrabold text-deep shadow-xl shadow-black/20 transition hover:brightness-95">
                 무료 진단 신청
               </Link>
-              <a href={SITE.mobileHref} className="rounded-full border border-white/40 bg-white/10 px-7 py-4 text-[15.5px] font-bold text-white backdrop-blur transition hover:bg-white/20">
-                전화 상담 {SITE.mobileDisplay}
+              <a href={SITE.phoneHref} className="rounded-full border border-white/40 bg-white/10 px-7 py-4 text-[15.5px] font-bold text-white backdrop-blur transition hover:bg-white/20">
+                전화 상담 {SITE.phoneDisplay}
               </a>
             </div>
           </div>
 
-          <div className="mt-14 grid max-w-[940px] gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {["해충 방제", "소독/방역", "공기질 관리", "물탱크 청소"].map((item) => (
-              <Link
-                key={item}
-                href="/services"
-                className="flex min-h-[88px] items-center justify-between rounded-[8px] border border-white/18 bg-white/12 px-5 text-[15px] font-extrabold backdrop-blur transition hover:-translate-y-1 hover:bg-white/20"
-              >
-                {item}
-                <ICONS.ArrowRight size={18} aria-hidden="true" />
-              </Link>
-            ))}
+          <div className="rounded-[8px] border border-white/20 bg-white/12 p-4 shadow-2xl shadow-black/20 backdrop-blur-md">
+            <div className="rounded-[8px] bg-white p-3">
+              <div className="relative aspect-[16/7] overflow-hidden rounded-[8px]">
+                <Image
+                  src="/images/home/flyer-brand-top.png"
+                  alt="한국방역환경 해충 박멸 방역 소독 안내"
+                  fill
+                  sizes="390px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-2">
+              {["바퀴벌레 박멸", "쥐 방제", "코로나 소독", "물탱크 청소"].map((item) => (
+                <div key={item} className="rounded-[8px] bg-white/14 px-3 py-3 text-center text-[13px] font-extrabold">
+                  {item}
+                </div>
+              ))}
+            </div>
+            <p className="mt-4 text-[13px] leading-relaxed text-white/74">
+              전단에 담긴 실제 서비스 범위와 지역 방역 경력을 기반으로 상담부터 현장 관리까지 안내합니다.
+            </p>
           </div>
         </div>
       </div>

@@ -7,13 +7,13 @@ import { SERVICES_DATA } from "../lib/services-data"
 import { ICONS } from "../lib/icons"
 
 const serviceImages = {
-  roach: "/images/home/hero-sanitation-tech.png",
-  rat: "/images/home/inspection-checklist.png",
+  roach: "/images/home/flyer-roach.png",
+  rat: "/images/home/flyer-rat.png",
   "flying-insect": "/images/home/hero-sanitation-tech.png",
-  disinfection: "/images/home/inspection-checklist.png",
-  "air-quality": "/images/home/hero-sanitation-tech.png",
+  disinfection: "/images/home/flyer-disinfection.png",
+  "air-quality": "/images/home/inspection-checklist.png",
   mattress: "/images/home/home-bedroom-inspection.png",
-  "water-tank": "/images/home/water-tank-inspection.png",
+  "water-tank": "/images/home/flyer-water-tank.png",
 }
 
 export default function SolutionCarousel() {
@@ -28,14 +28,14 @@ export default function SolutionCarousel() {
       <div className="mx-auto grid max-w-[1180px] gap-9 lg:grid-cols-[280px_1fr]">
         <div>
           <h2 className="text-[31px] font-extrabold leading-[1.25] tracking-[-0.02em] text-deep md:text-[42px]">
-            한국방역환경의
+            전단 속 서비스,
             <br />
-            다양한 솔루션을
+            홈페이지에서 바로
             <br />
-            만나보세요!
+            확인하세요.
           </h2>
           <p className="mt-6 text-[15px] leading-relaxed text-body3">
-            생활부터 공간까지, 필요한 순간에 맞춘 전문 서비스를 제공합니다.
+            바퀴벌레, 쥐, 소독, 물탱크 청소까지 사진과 함께 확인하고 바로 상담으로 이어집니다.
           </p>
           <div className="mt-9 flex gap-3 text-deep">
             <button type="button" onClick={() => scrollBy(-340)} aria-label="이전 솔루션" className="transition hover:text-primary">
@@ -64,12 +64,12 @@ export default function SolutionCarousel() {
                 <div className="relative h-36 overflow-hidden">
                   <Image
                     src={imageSrc}
-                    alt={`${s.title} 서비스 이미지`}
+                    alt={`${s.title} 서비스 사진`}
                     fill
                     sizes="300px"
                     className="object-cover"
                   />
-                  <div className={`absolute inset-0 ${featured ? "bg-primary/62" : "bg-deep/18"}`} />
+                  <div className={`absolute inset-0 ${featured ? "bg-primary/42" : "bg-deep/12"}`} />
                 </div>
                 <div className="p-7">
                   <span className={`mb-6 flex h-13 w-13 items-center justify-center rounded-[8px] ${featured ? "bg-primary text-white" : "bg-tint text-primary"}`}>
