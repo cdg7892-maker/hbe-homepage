@@ -48,7 +48,7 @@ export default function Hero() {
         <div className="absolute inset-y-0 left-0 hidden w-[54%] bg-primary/80 [clip-path:polygon(0_0,86%_0,100%_100%,0_100%)] lg:block" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
-        <div className="relative mx-auto grid min-h-[720px] max-w-[1180px] gap-10 px-5 py-16 md:px-0 lg:grid-cols-[1fr_390px] lg:items-center">
+        <div className="relative mx-auto flex min-h-[720px] max-w-[1180px] items-center px-5 py-16 md:px-0">
           <div className="max-w-[650px]">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-4 py-2 text-[13px] font-bold backdrop-blur">
               <ICONS.ShieldCheck size={16} aria-hidden="true" />
@@ -63,50 +63,13 @@ export default function Hero() {
               {SITE.companyName}은 바퀴벌레, 쥐, 소독, 물탱크 청소까지 현장 진단을 바탕으로 공간에 맞는 해결책을 제안합니다.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/contact" className="rounded-full bg-white px-7 py-4 text-[15.5px] font-extrabold text-deep shadow-xl shadow-black/20 transition hover:brightness-95">
+              <Link href="/contact" className="rounded-full border border-[#63a87f] bg-[#4a8a68] px-7 py-4 text-[15.5px] font-extrabold text-white shadow-xl shadow-black/20 transition hover:bg-[#3f775a]">
                 무료 진단 신청
               </Link>
               <a href={SITE.phoneHref} className="rounded-full border border-white/40 bg-white/10 px-7 py-4 text-[15.5px] font-bold text-white backdrop-blur transition hover:bg-white/20">
                 전화 상담 {SITE.phoneDisplay}
               </a>
             </div>
-          </div>
-
-          <div className="rounded-[8px] border border-white/20 bg-deep/72 p-6 shadow-2xl shadow-black/20 backdrop-blur-md">
-            <p className="text-[13px] font-extrabold text-on-primary-muted">무료 현장 진단 프로세스</p>
-            <h2 className="mt-3 text-[28px] font-extrabold leading-tight text-white">
-              문의하면 바로 확인할
-              <br />
-              핵심 항목입니다.
-            </h2>
-            <div className="mt-6 grid gap-3">
-              {[
-                ["01", "침입 경로 확인", "배수구, 틈새, 외부 유입 지점 점검"],
-                ["02", "맞춤 방제 제안", "가정/매장/시설별 작업 범위 안내"],
-                ["03", "사후 관리 안내", "재발 가능 지점과 관리 주기 상담"],
-              ].map(([step, title, desc]) => (
-                <div key={step} className="grid grid-cols-[42px_1fr] gap-3 rounded-[8px] border border-white/14 bg-white/10 p-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-[8px] bg-white text-[13px] font-extrabold text-primary">
-                    {step}
-                  </span>
-                  <span>
-                    <strong className="block text-[15px] font-extrabold text-white">{title}</strong>
-                    <span className="mt-1 block text-[12px] leading-relaxed text-white/66">{desc}</span>
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-2">
-              {["바퀴벌레 박멸", "쥐 방제", "코로나 소독", "물탱크 청소"].map((item) => (
-                <div key={item} className="rounded-[8px] bg-white/14 px-3 py-3 text-center text-[13px] font-extrabold">
-                  {item}
-                </div>
-              ))}
-            </div>
-            <a href={SITE.phoneHref} className="mt-5 flex items-center justify-between rounded-[8px] bg-white px-5 py-4 text-[15px] font-extrabold text-deep transition hover:brightness-95">
-              전화 상담 {SITE.phoneDisplay}
-              <ICONS.Phone size={18} aria-hidden="true" />
-            </a>
           </div>
         </div>
       </div>
