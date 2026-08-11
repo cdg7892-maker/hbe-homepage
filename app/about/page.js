@@ -92,9 +92,6 @@ export default function AboutPage() {
               전문업체입니다. 상담부터 현장 진단, 시공, 사후 안내까지 한 흐름으로 책임 있게 관리합니다.
             </p>
             <div className="mt-9 grid max-w-[360px] gap-3 sm:flex sm:max-w-none sm:flex-wrap">
-              <Link href="/about/greeting" className="rounded-full bg-white px-7 py-3.5 text-center text-[15px] font-extrabold text-deep">
-                인사말 보기
-              </Link>
               <a href={SITE.phoneHref} className="rounded-full border border-white/35 bg-white/10 px-7 py-3.5 text-center text-[15px] font-extrabold text-white backdrop-blur">
                 상담 {SITE.phoneDisplay}
               </a>
