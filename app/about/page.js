@@ -250,7 +250,7 @@ export default function AboutPage() {
             </h2>
           </div>
           <div className="grid gap-3 sm:flex">
-            <Link href="/about/greeting" className="rounded-full bg-white px-7 py-3.5 text-center text-[15px] font-extrabold text-deep">
+            <Link href="/about/greeting" className="btn-light-cta rounded-full bg-white px-7 py-3.5 text-center text-[15px] font-extrabold !text-deep">
               인사말 보기
             </Link>
             <Link href="/contact" className="rounded-full bg-primary px-7 py-3.5 text-center text-[15px] font-extrabold text-white">

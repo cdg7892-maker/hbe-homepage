@@ -189,7 +189,7 @@ export default function BlogPage() {
             <a href={SITE.phoneHref} className="rounded-full bg-primary px-7 py-3.5 text-center text-[15px] font-extrabold text-white">
               전화 상담 {SITE.phoneDisplay}
             </a>
-            <Link href="/contact" className="rounded-full border border-hairline-soft2 bg-white px-7 py-3.5 text-center text-[15px] font-extrabold text-deep">
+            <Link href="/contact" className="btn-light-cta rounded-full bg-white px-7 py-3.5 text-center text-[15px] font-extrabold !text-deep">
               무료진단 문의
             </Link>
           </div>

@@ -107,6 +107,23 @@ a {
   box-shadow: 0 12px 24px -6px rgba(74, 138, 104, 0.55);
 }
 
+.btn-light-cta {
+  background: #ffffff;
+  color: var(--color-deep) !important;
+  border: 1px solid var(--color-hairline-soft2);
+  box-shadow: 0 12px 24px -12px rgba(44, 71, 54, 0.22);
+}
+
+.btn-light-cta:hover {
+  background: var(--color-tint);
+  color: var(--color-deep) !important;
+}
+
+.btn-light-cta *,
+.btn-light-cta:visited {
+  color: var(--color-deep) !important;
+}
+
 .card-elevated {
   box-shadow: 0 4px 16px -6px rgba(44, 71, 54, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;

@@ -16,7 +16,7 @@ export default function Cta() {
           <a href={SITE.phoneHref} className="btn-signature btn-primary px-7 py-4 text-base font-extrabold">
             전화 상담 {SITE.phoneDisplay}
           </a>
-          <a href="/contact" className="btn-signature border border-hairline-soft2 bg-white px-7 py-4 text-base font-bold text-deep transition hover:bg-tint">
+          <a href="/contact" className="btn-signature btn-light-cta bg-white px-7 py-4 text-base font-bold !text-deep transition">
             온라인 문의
           </a>
         </div>
