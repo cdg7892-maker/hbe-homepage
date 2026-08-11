@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { SITE } from "../lib/site"
@@ -5,7 +8,43 @@ import { ICONS } from "../lib/icons"
 
 const keywordLinks = ["바퀴벌레", "쥐 방제", "소독", "물탱크 청소", "가정집 비용"]
 
+const heroSlides = [
+  {
+    image: "/images/home/hero-science-inspection.png",
+    alt: "방역 전문가가 어두운 공간에서 과학 장비로 해충 흔적을 점검하는 모습",
+    eyebrow: "정밀 진단",
+    title: "보이지 않는 문제까지\n먼저 찾아냅니다",
+    desc: `${SITE.companyName}은 해충의 침입 경로와 번식 원인을 먼저 확인한 뒤 공간에 맞는 해결책을 제안합니다.`,
+  },
+  {
+    image: "/images/home/hero-science-control.png",
+    alt: "방역 관제 전문가들이 모니터링 화면으로 위생 데이터를 확인하는 모습",
+    eyebrow: "과학적 관리",
+    title: "감으로 하지 않고\n데이터로 관리합니다",
+    desc: "가정, 매장, 시설별 환경을 진단하고 방역 소독부터 사후 관리까지 체계적으로 안내합니다.",
+  },
+  {
+    image: "/images/home/hero-science-dispatch.png",
+    alt: "방역 전문가가 서비스 차량 옆에서 장비를 준비하는 모습",
+    eyebrow: "빠른 방문 상담",
+    title: "강진권 현장으로\n빠르게 찾아갑니다",
+    desc: `바퀴벌레, 쥐, 소독, 물탱크 청소 상담은 ${SITE.phoneDisplay}으로 바로 연결됩니다.`,
+  },
+]
+
 export default function Hero() {
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % heroSlides.length)
+    }, 5200)
+
+    return () => window.clearInterval(timer)
+  }, [])
+
+  const slide = heroSlides[activeSlide]
+
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="border-b border-hairline bg-white px-5 py-5 md:px-14">
@@ -36,31 +75,35 @@ export default function Hero() {
       </div>
 
       <div className="relative min-h-[720px] bg-deep text-white">
-        <Image
-          src="/images/home/hero-sanitation-tech.png"
-          alt="전문 방역 기사가 깨끗한 매장 내부를 점검하는 모습"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,24,49,0.94)_0%,rgba(7,24,49,0.78)_38%,rgba(0,119,198,0.22)_66%,rgba(255,255,255,0.03)_100%)]" />
-        <div className="absolute inset-y-0 left-0 hidden w-[54%] bg-primary/80 [clip-path:polygon(0_0,86%_0,100%_100%,0_100%)] lg:block" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+        {heroSlides.map((item, index) => (
+          <Image
+            key={item.image}
+            src={item.image}
+            alt={index === activeSlide ? item.alt : ""}
+            aria-hidden={index !== activeSlide}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className={`object-cover object-center transition-opacity duration-1000 ${
+              index === activeSlide ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,18,35,0.96)_0%,rgba(6,18,35,0.88)_33%,rgba(6,18,35,0.34)_64%,rgba(6,18,35,0.08)_100%)]" />
+        <div className="absolute inset-y-0 left-0 hidden w-[58%] bg-primary/58 [clip-path:polygon(0_0,80%_0,100%_100%,0_100%)] lg:block" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/48 via-transparent to-black/10" />
 
         <div className="relative mx-auto flex min-h-[720px] max-w-[1180px] items-center px-5 py-16 md:px-0">
           <div className="max-w-[650px]">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/12 px-4 py-2 text-[13px] font-bold backdrop-blur">
               <ICONS.ShieldCheck size={16} aria-hidden="true" />
-              해충 박멸 · 방역 소독 · 물탱크 청소 전문
+              {slide.eyebrow} · 해충 박멸 · 방역 소독 · 물탱크 청소
             </span>
-            <h1 className="mt-7 text-[42px] font-extrabold leading-[1.12] tracking-[-0.02em] md:text-[70px]">
-              보이지 않는 문제까지
-              <br />
-              먼저 찾아냅니다
+            <h1 className="mt-7 whitespace-pre-line text-[42px] font-extrabold leading-[1.12] tracking-normal md:text-[70px]">
+              {slide.title}
             </h1>
             <p className="mt-6 max-w-[560px] text-[17px] leading-[1.78] text-white/82 md:text-[19px]">
-              {SITE.companyName}은 바퀴벌레, 쥐, 소독, 물탱크 청소까지 현장 진단을 바탕으로 공간에 맞는 해결책을 제안합니다.
+              {slide.desc}
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href="/contact" className="rounded-full border border-[#63a87f] bg-[#4a8a68] px-7 py-4 text-[15.5px] font-extrabold text-white shadow-xl shadow-black/20 transition hover:bg-[#3f775a]">
@@ -69,6 +112,20 @@ export default function Hero() {
               <a href={SITE.phoneHref} className="rounded-full border border-white/40 bg-white/10 px-7 py-4 text-[15.5px] font-bold text-white backdrop-blur transition hover:bg-white/20">
                 전화 상담 {SITE.phoneDisplay}
               </a>
+            </div>
+            <div className="mt-10 flex gap-3" aria-label="메인 히어로 슬라이드 선택">
+              {heroSlides.map((item, index) => (
+                <button
+                  key={item.image}
+                  type="button"
+                  onClick={() => setActiveSlide(index)}
+                  aria-label={`${index + 1}번 히어로 이미지 보기`}
+                  aria-pressed={index === activeSlide}
+                  className={`h-2.5 rounded-full transition-all ${
+                    index === activeSlide ? "w-12 bg-white" : "w-2.5 bg-white/38 hover:bg-white/70"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
