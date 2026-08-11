@@ -7,13 +7,13 @@ import { SERVICES_DATA } from "../lib/services-data"
 import { ICONS } from "../lib/icons"
 
 const serviceImages = {
-  roach: "/images/home/flyer-roach.png",
-  rat: "/images/home/flyer-rat.png",
+  roach: "/images/home/premium-kitchen-inspection.png",
+  rat: "/images/home/premium-rodent-control.png",
   "flying-insect": "/images/home/hero-sanitation-tech.png",
-  disinfection: "/images/home/flyer-disinfection.png",
+  disinfection: "/images/home/premium-disinfection-service.png",
   "air-quality": "/images/home/inspection-checklist.png",
   mattress: "/images/home/home-bedroom-inspection.png",
-  "water-tank": "/images/home/flyer-water-tank.png",
+  "water-tank": "/images/home/premium-water-tank-service.png",
 }
 
 export default function SolutionCarousel() {
@@ -28,7 +28,7 @@ export default function SolutionCarousel() {
       <div className="mx-auto grid max-w-[1180px] gap-9 lg:grid-cols-[280px_1fr]">
         <div>
           <h2 className="text-[31px] font-extrabold leading-[1.25] tracking-[-0.02em] text-deep md:text-[42px]">
-            전단 속 서비스,
+            필요한 서비스,
             <br />
             홈페이지에서 바로
             <br />

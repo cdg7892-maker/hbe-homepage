@@ -3,11 +3,11 @@ import Link from "next/link"
 import { SERVICES_DATA, VENUES } from "../lib/services-data"
 import { ICONS } from "../lib/icons"
 
-const flyerServices = [
-  { label: "바퀴벌레 박멸", image: "/images/home/flyer-roach.png", href: "/services/roach" },
-  { label: "쥐 방제", image: "/images/home/flyer-rat.png", href: "/services/rat" },
-  { label: "코로나 소독", image: "/images/home/flyer-disinfection.png", href: "/services/disinfection" },
-  { label: "물탱크 청소", image: "/images/home/flyer-water-tank.png", href: "/services/water-tank" },
+const featuredServices = [
+  { label: "바퀴벌레 박멸", image: "/images/home/premium-kitchen-inspection.png", href: "/services/roach" },
+  { label: "쥐 방제", image: "/images/home/premium-rodent-control.png", href: "/services/rat" },
+  { label: "공간 소독", image: "/images/home/premium-disinfection-service.png", href: "/services/disinfection" },
+  { label: "물탱크 청소", image: "/images/home/premium-water-tank-service.png", href: "/services/water-tank" },
 ]
 
 export default function ProblemVenueSplit() {
@@ -23,16 +23,16 @@ export default function ProblemVenueSplit() {
               바로 찾아보세요.
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-white/74">
-              전단에 안내된 대표 서비스부터 현장 맞춤 관리까지, 증상에 맞는 상담으로 연결합니다.
+              대표 서비스부터 현장 맞춤 관리까지, 증상에 맞는 상담으로 연결합니다.
             </p>
 
             <div className="mt-9 grid grid-cols-2 gap-3">
-              {flyerServices.map((service) => (
+              {featuredServices.map((service) => (
                 <Link key={service.label} href={service.href} className="group overflow-hidden rounded-[8px] border border-white/24 bg-white/10">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={service.image}
-                      alt={`${service.label} 서비스 사진`}
+                      alt={`${service.label} 현장 서비스 사진`}
                       fill
                       sizes="260px"
                       className="object-cover transition group-hover:scale-105"

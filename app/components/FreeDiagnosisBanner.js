@@ -31,15 +31,20 @@ export default function FreeDiagnosisBanner() {
         </div>
 
         <div className="flex flex-col justify-center bg-white px-6 py-10 md:px-12">
-          <p className="text-[13px] font-extrabold text-primary">전단에서 강조한 핵심 경고</p>
-          <div className="relative mt-4 aspect-[4.3/1] overflow-hidden rounded-[8px] border border-hairline bg-white">
+          <p className="text-[13px] font-extrabold text-primary">방치하면 커지는 위생 리스크</p>
+          <div className="relative mt-4 aspect-[16/9] overflow-hidden rounded-[8px] border border-hairline bg-white">
             <Image
-              src="/images/home/flyer-warning.png"
-              alt="바퀴벌레와 세균은 위생과 건강에 해로우니 방치하지 말라는 안내 문구"
+              src="/images/home/premium-kitchen-inspection.png"
+              alt="방역 전문가가 주방의 해충 침입 가능 지점을 점검하는 모습"
               fill
               sizes="(min-width: 1024px) 520px, 90vw"
-              className="object-cover"
+              className="object-cover object-[35%_50%]"
             />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-deep/82 to-transparent p-5">
+              <p className="max-w-[430px] text-[18px] font-extrabold leading-snug text-white">
+                바퀴벌레와 쥐는 보이는 순간보다, 숨어 번식하는 시간이 더 위험합니다.
+              </p>
+            </div>
           </div>
           <p className="mt-5 text-[16px] font-extrabold leading-relaxed text-deep">
             보이는 해충만 없애는 것이 아니라, 번식 원인과 침입 경로까지 확인해야 재발을 줄일 수 있습니다.

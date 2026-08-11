@@ -74,14 +74,19 @@ export default function Hero() {
 
           <div className="rounded-[8px] border border-white/20 bg-white/12 p-4 shadow-2xl shadow-black/20 backdrop-blur-md">
             <div className="rounded-[8px] bg-white p-3">
-              <div className="relative aspect-[16/7] overflow-hidden rounded-[8px]">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-[8px]">
                 <Image
-                  src="/images/home/flyer-brand-top.png"
-                  alt="한국방역환경 해충 박멸 방역 소독 안내"
+                  src="/images/home/premium-consultation.png"
+                  alt="방역 전문가가 현장 진단 결과를 고객에게 설명하는 모습"
                   fill
                   sizes="390px"
-                  className="object-cover"
+                  className="object-cover object-[48%_45%]"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-deep/60 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-[13px] font-extrabold text-white">상담부터 현장 진단까지</p>
+                  <p className="mt-1 text-[21px] font-extrabold leading-tight text-white">공간에 맞춘 방역 계획</p>
+                </div>
               </div>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-2">
@@ -92,7 +97,7 @@ export default function Hero() {
               ))}
             </div>
             <p className="mt-4 text-[13px] leading-relaxed text-white/74">
-              전단에 담긴 실제 서비스 범위와 지역 방역 경력을 기반으로 상담부터 현장 관리까지 안내합니다.
+              실제 서비스 범위와 지역 방역 경력을 기반으로 상담부터 현장 관리까지 안내합니다.
             </p>
           </div>
         </div>

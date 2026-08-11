@@ -11,18 +11,18 @@ const proofCards = [
     position: "object-[50%_38%]",
   },
   {
-    title: "서비스 범위 확인",
-    desc: "바퀴벌레, 쥐, 소독, 물탱크 청소",
-    image: "/images/home/flyer-services-strip.png",
-    alt: "한국방역환경 서비스 범위 사진",
-    position: "object-center",
+    title: "정밀 현장 진단",
+    desc: "침입 경로와 번식 원인 확인",
+    image: "/images/home/premium-kitchen-inspection.png",
+    alt: "방역 전문가가 깨끗한 주방 하부를 점검하는 모습",
+    position: "object-[42%_50%]",
   },
   {
-    title: "전문 이력",
-    desc: "지역 기준 방역 전문 경력",
-    image: "/images/home/flyer-credentials.png",
-    alt: "한국방역환경 방역 전문 경력 안내",
-    position: "object-center",
+    title: "상담 리포트",
+    desc: "고객 상황에 맞춘 관리 제안",
+    image: "/images/home/premium-consultation.png",
+    alt: "방역 전문가가 고객에게 진단 리포트를 설명하는 모습",
+    position: "object-[44%_50%]",
   },
 ]
 
@@ -33,7 +33,7 @@ export default function TrustStrip() {
         <div>
           <span className="text-[13px] font-extrabold uppercase tracking-[0.08em] text-primary">Verified Local Care</span>
           <h2 className="mt-3 text-[28px] font-extrabold leading-[1.3] tracking-[-0.02em] text-deep md:text-[40px]">
-            전단 속 서비스와
+            검증된 서비스와
             <br />
             실제 이력을 함께 보여드립니다.
           </h2>
