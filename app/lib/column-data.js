@@ -10,7 +10,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/home-bedroom-inspection.png",
+    image: "/images/columns/apartment-cockroach-kitchen-check.jpg",
     imageAlt: "강진 아파트 바퀴벌레 방역을 위해 주방과 베란다 주변을 점검하는 모습",
     tags: ["강진아파트바퀴벌레", "강진아파트방역", "강진가정집방역"],
     summary: [
@@ -85,7 +85,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-rodent-control.png",
+    image: "/images/columns/house-attic-rodent-inspection.jpg",
     imageAlt: "강진 빌라와 주택 쥐방제를 위해 천장과 외부 유입 경로를 점검하는 모습",
     tags: ["강진주택쥐방제", "강진빌라쥐", "강진쥐퇴치"],
     summary: [
@@ -160,7 +160,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-kitchen-inspection.png",
+    image: "/images/columns/restaurant-doorway-pest-check.jpg",
     imageAlt: "강진 식당 파리 방역을 위해 주방과 홀 동선을 점검하는 모습",
     tags: ["강진식당파리", "강진파리방역", "강진음식점날벌레"],
     summary: [
@@ -310,7 +310,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/inspection-checklist.png",
+    image: "/images/columns/office-touchpoint-disinfection.jpg",
     imageAlt: "강진 사무실 소독과 방역을 위해 접촉면 체크리스트를 확인하는 모습",
     tags: ["강진사무실소독", "강진사무실방역", "강진사무실해충"],
     summary: [
@@ -385,7 +385,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-disinfection-service.png",
+    image: "/images/columns/care-facility-disinfection.jpg",
     imageAlt: "강진 교회와 종교시설 소독을 위해 예배당 접촉면을 관리하는 모습",
     tags: ["강진교회소독", "강진종교시설소독", "강진예배당방역"],
     summary: [
@@ -460,7 +460,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/water-tank-inspection.png",
+    image: "/images/columns/rooftop-water-tank-inspection.jpg",
     imageAlt: "강진 상가 물탱크청소를 위해 저수조 내부 상태를 확인하는 모습",
     tags: ["강진상가물탱크청소", "강진건물저수조청소", "강진상가저수조"],
     summary: [
@@ -535,7 +535,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/hero-sanitation-tech.png",
+    image: "/images/columns/restroom-drain-sanitation-check.jpg",
     imageAlt: "강진 배수구 날벌레 방역을 위해 화장실과 싱크대 배수구를 점검하는 모습",
     tags: ["강진배수구날벌레", "강진화장실날벌레", "강진싱크대날벌레"],
     summary: [
@@ -685,7 +685,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-consultation.png",
+    image: "/images/columns/cafe-drain-fruitfly-inspection.jpg",
     imageAlt: "강진 카페 초파리 방역을 위해 음료 제조대와 배수구를 상담하는 모습",
     tags: ["강진카페초파리", "강진초파리방역", "강진배수구날벌레"],
     summary: [
@@ -760,7 +760,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/home-bedroom-inspection.png",
+    image: "/images/columns/lodging-bedbug-room-check.jpg",
     imageAlt: "강진 모텔 빈대 방역을 위해 침대 주변과 객실을 점검하는 모습",
     tags: ["강진모텔빈대", "강진숙박업소빈대", "강진빈대방역"],
     summary: [
@@ -910,7 +910,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/inspection-checklist.png",
+    image: "/images/columns/school-classroom-disinfection.jpg",
     imageAlt: "강진 학교 소독을 위해 교실과 급식실 접촉면 체크리스트를 확인하는 모습",
     tags: ["강진학교소독", "강진교육시설방역", "강진급식실소독"],
     summary: [
@@ -985,7 +985,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-disinfection-service.png",
+    image: "/images/columns/care-facility-disinfection.jpg",
     imageAlt: "강진 병원과 요양시설 소독을 위해 접촉면을 관리하는 모습",
     tags: ["강진병원소독", "강진요양원소독", "강진의료시설방역"],
     summary: [
@@ -1060,7 +1060,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/hero-science-dispatch.png",
+    image: "/images/columns/factory-warehouse-pest-inspection.jpg",
     imageAlt: "강진 공장 방역을 위해 창고와 시설 동선을 점검하는 모습",
     tags: ["강진공장방역", "강진제조공장방역", "강진창고해충방제"],
     summary: [
@@ -1135,7 +1135,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-rodent-control.png",
+    image: "/images/columns/house-attic-rodent-inspection.jpg",
     imageAlt: "강진 농가 창고 쥐방제를 위해 사료 포대와 유입 경로를 확인하는 모습",
     tags: ["강진농가쥐방제", "강진사료창고쥐", "강진창고쥐퇴치"],
     summary: [
@@ -1210,7 +1210,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-consultation.png",
+    image: "/images/home/hero-science-dispatch.png",
     imageAlt: "강진읍 방역업체 상담원이 현장에서 방역 범위를 안내하는 모습",
     tags: ["강진읍방역", "강진읍방역업체", "강진읍소독"],
     summary: [
@@ -1435,7 +1435,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "7분",
-    image: "/images/home/premium-kitchen-inspection.png",
+    image: "/images/columns/apartment-cockroach-kitchen-check.jpg",
     imageAlt: "칠량면 바퀴벌레 방역을 위해 주방과 배수구 주변을 점검하는 모습",
     tags: ["칠량면방역", "칠량면바퀴벌레", "칠량면소독"],
     summary: [
@@ -1510,7 +1510,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "7분",
-    image: "/images/home/hero-sanitation-tech.png",
+    image: "/images/columns/restroom-drain-sanitation-check.jpg",
     imageAlt: "대구면 해충방제를 위해 실내 위생과 배수구 주변을 점검하는 모습",
     tags: ["대구면방역", "대구면해충방제", "대구면날벌레"],
     summary: [
@@ -1735,7 +1735,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-disinfection-service.png",
+    image: "/images/columns/restaurant-doorway-pest-check.jpg",
     imageAlt: "병영면 식당소독과 방역을 위해 매장 접촉면을 관리하는 모습",
     tags: ["병영면방역", "병영면식당소독", "병영면물탱크청소"],
     summary: [
@@ -1810,7 +1810,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-kitchen-inspection.png",
+    image: "/images/columns/restaurant-cockroach-inspection.jpg",
     imageAlt: "강진 식당 바퀴벌레 방역을 위해 주방 하부와 배수구를 점검하는 모습",
     tags: ["강진식당바퀴벌레", "강진주방방역", "음식점위생"],
     summary: [
@@ -1960,7 +1960,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-consultation.png",
+    image: "/images/columns/cafe-drain-fruitfly-inspection.jpg",
     imageAlt: "강진 카페 방역을 위해 매장 관리자와 발생 위치를 상담하는 모습",
     tags: ["강진카페방역", "강진초파리방역", "날벌레방제"],
     summary: [
@@ -2110,7 +2110,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/premium-disinfection-service.png",
+    image: "/images/columns/lodging-bedbug-room-check.jpg",
     imageAlt: "강진 숙박업소 소독을 위해 객실 접촉면을 관리하는 방역 전문가",
     tags: ["강진숙박업소소독", "강진모텔소독", "객실방역"],
     summary: [
@@ -2185,7 +2185,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/inspection-checklist.png",
+    image: "/images/columns/school-classroom-disinfection.jpg",
     imageAlt: "강진 어린이집과 학원 소독을 위한 접촉면 점검 체크리스트",
     tags: ["강진어린이집소독", "강진학원소독", "교육시설방역"],
     summary: [
@@ -2260,7 +2260,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "8분",
-    image: "/images/home/water-tank-inspection.png",
+    image: "/images/columns/rooftop-water-tank-inspection.jpg",
     imageAlt: "강진 아파트 물탱크청소를 위해 저수조 내부 점검을 준비하는 모습",
     tags: ["강진아파트물탱크청소", "강진저수조청소", "공동주택관리"],
     summary: [
@@ -2335,7 +2335,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "7분",
-    image: "/images/home/hero-sanitation-tech.png",
+    image: "/images/columns/restroom-drain-sanitation-check.jpg",
     imageAlt: "강진 상가 화장실 날벌레 방역을 위해 배수구와 위생 상태를 점검하는 모습",
     tags: ["강진화장실날벌레", "강진배수구방역", "상가방역"],
     summary: [
@@ -2485,7 +2485,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "6분",
-    image: "/images/home/premium-disinfection-service.png",
+    image: "/images/columns/office-touchpoint-disinfection.jpg",
     imageAlt: "강진 소독업체 작업자가 실내 접촉면 소독을 진행하는 모습",
     tags: ["강진소독업체", "강진소독", "방역소독"],
     summary: [
@@ -2635,7 +2635,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "6분",
-    image: "/images/home/premium-kitchen-inspection.png",
+    image: "/images/columns/apartment-cockroach-kitchen-check.jpg",
     imageAlt: "강진 바퀴벌레방역을 위해 주방 하부를 점검하는 모습",
     tags: ["강진바퀴벌레", "강진바퀴벌레방역", "주방위생"],
     summary: [
@@ -2710,7 +2710,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "6분",
-    image: "/images/home/premium-rodent-control.png",
+    image: "/images/columns/house-attic-rodent-inspection.jpg",
     imageAlt: "강진 쥐방제를 위해 창고와 유입 경로를 확인하는 모습",
     tags: ["강진쥐방제", "강진쥐퇴치", "유입차단"],
     summary: [
@@ -2785,7 +2785,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "7분",
-    image: "/images/home/premium-kitchen-inspection.png",
+    image: "/images/columns/restaurant-cockroach-inspection.jpg",
     imageAlt: "강진 음식점방역을 위해 주방과 배수구를 점검하는 모습",
     tags: ["강진식당방역", "강진음식점방역", "매장위생"],
     summary: [
@@ -2860,7 +2860,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "6분",
-    image: "/images/home/home-bedroom-inspection.png",
+    image: "/images/home/premium-consultation.png",
     imageAlt: "강진 가정집과 사무실 방역을 위한 실내 점검 이미지",
     tags: ["강진가정집방역", "강진상가방역", "강진사무실방역"],
     summary: [
@@ -3010,7 +3010,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 11.",
     readTime: "6분",
-    image: "/images/home/premium-kitchen-inspection.png",
+    image: "/images/columns/restaurant-cockroach-inspection.jpg",
     imageAlt: "방역 전문가가 주방 하부와 배수구 주변을 점검하는 모습",
     tags: ["바퀴벌레", "주방위생", "재발방지"],
     summary: [
@@ -3051,7 +3051,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 10.",
     readTime: "7분",
-    image: "/images/home/premium-consultation.png",
+    image: "/images/columns/restaurant-doorway-pest-check.jpg",
     imageAlt: "방역 전문가가 매장 관리자와 점검 계획을 상담하는 모습",
     tags: ["음식점방역", "영업장위생", "정기관리"],
     summary: [
@@ -3092,7 +3092,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 9.",
     readTime: "5분",
-    image: "/images/home/premium-disinfection-service.png",
+    image: "/images/columns/care-facility-disinfection.jpg",
     imageAlt: "보호 장비를 착용한 방역 전문가가 실내 소독을 진행하는 모습",
     tags: ["정기소독", "감염예방", "공간관리"],
     summary: [
@@ -3133,7 +3133,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 8.",
     readTime: "6분",
-    image: "/images/home/premium-water-tank-service.png",
+    image: "/images/columns/rooftop-water-tank-inspection.jpg",
     imageAlt: "물탱크 청소 현장을 점검하는 방역 위생 전문가",
     tags: ["물탱크청소", "저수조", "수질관리"],
     summary: [
@@ -3215,7 +3215,7 @@ const RAW_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 6.",
     readTime: "5분",
-    image: "/images/home/inspection-checklist.png",
+    image: "/images/columns/restroom-drain-sanitation-check.jpg",
     imageAlt: "해충 점검 체크리스트와 방역 장비 이미지",
     tags: ["모기방제", "날벌레", "여름방역"],
     summary: [
