@@ -335,7 +335,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/lodging-bedbug-room-check.jpg",
+    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
     imageAlt: "완도 숙박업소 방역을 위해 객실 침대 주변을 점검하는 모습",
     tags: ["완도숙박업소방역", "완도펜션방역", "완도빈대방역"],
     summary: [
@@ -402,7 +402,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/cafe-drain-fruitfly-inspection.jpg",
+    image: "/images/columns/regional-seafood-drain-hygiene-check.jpg",
     imageAlt: "완도 횟집과 식당 방역을 위해 배수구와 조리 공간을 점검하는 모습",
     tags: ["완도횟집방역", "완도식당방역", "완도초파리방역"],
     summary: [
@@ -588,7 +588,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/restaurant-cockroach-inspection.jpg",
+    image: "/images/columns/regional-restaurant-fridge-gap-inspection.jpg",
     imageAlt: "해남 식당 바퀴벌레 방역을 위해 주방 하부를 점검하는 모습",
     tags: ["해남식당바퀴벌레", "해남식당방역", "해남주방방역"],
     summary: [
@@ -650,7 +650,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/house-attic-rodent-inspection.jpg",
+    image: "/images/columns/regional-house-exterior-rodent-entry.jpg",
     imageAlt: "해남 창고 쥐방제를 위해 천장과 적재 공간 주변 흔적을 확인하는 모습",
     tags: ["해남창고쥐방제", "해남쥐방제", "해남농가창고방역"],
     summary: [
@@ -713,7 +713,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/rooftop-water-tank-inspection.jpg",
+    image: "/images/columns/regional-coastal-water-tank-check.jpg",
     imageAlt: "해남 물탱크청소를 위해 옥상 저수조 내부 상태를 확인하는 모습",
     tags: ["해남물탱크청소", "해남저수조청소", "해남건물물탱크"],
     summary: [

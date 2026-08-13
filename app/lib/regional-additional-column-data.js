@@ -39,7 +39,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 창고 쥐방제, 포대와 박스가 갉혔을 때",
     excerpt:
       "장흥 창고에서 포대, 박스, 전선, 식재료 포장이 갉혔다면 배설물 위치, 출입문 하부, 배관 틈, 적재물 뒤 은신처를 함께 확인해야 합니다.",
-    image: "/images/columns/house-attic-rodent-inspection.jpg",
+    image: "/images/columns/regional-house-exterior-rodent-entry.jpg",
     imageAlt: "장흥 창고 쥐방제를 위해 적재 공간과 천장 주변을 확인하는 모습",
     tags: ["장흥창고쥐방제", "장흥쥐방제", "장흥창고방역"],
     topic: "쥐 배설물과 갉은 흔적",
@@ -103,7 +103,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 카페 초파리 방역, 바닷가 매장 배수구에서 반복될 때",
     excerpt:
       "완도 카페에서 초파리와 날벌레가 반복된다면 음료 제조대, 배수구, 과일·시럽 보관, 출입문과 외부 조명을 함께 확인해야 합니다.",
-    image: "/images/columns/cafe-drain-fruitfly-inspection.jpg",
+    image: "/images/columns/regional-cafe-syrup-drain-check.jpg",
     imageAlt: "완도 카페 초파리 방역을 위해 배수구와 카운터 하부를 점검하는 모습",
     tags: ["완도카페방역", "완도초파리방역", "완도날벌레방역"],
     topic: "초파리와 외부 날벌레",
@@ -119,7 +119,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 펜션 빈대 방역, 침대 주변 흔적이 걱정될 때",
     excerpt:
       "완도 펜션에서 빈대 의심 흔적이나 객실 벌레가 보이면 침대, 헤드보드, 콘센트 주변, 짐 보관 위치, 세탁 동선을 함께 확인해야 합니다.",
-    image: "/images/columns/lodging-bedbug-room-check.jpg",
+    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
     imageAlt: "완도 펜션 빈대 방역을 위해 침대와 헤드보드 주변을 점검하는 모습",
     tags: ["완도펜션빈대", "완도빈대방역", "완도숙박업소방역"],
     topic: "빈대 의심 흔적",
@@ -151,7 +151,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 상가 화장실 날벌레 방역, 배수구에서 반복될 때",
     excerpt:
       "완도 상가 화장실에서 작은 날벌레가 반복된다면 바닥 배수구, 세면대 배관, 청소 주기, 환기 상태, 외부 유입을 함께 봐야 합니다.",
-    image: "/images/columns/restroom-drain-sanitation-check.jpg",
+    image: "/images/columns/regional-restroom-floor-drain-check.jpg",
     imageAlt: "완도 상가 화장실 날벌레 방역을 위해 배수구와 세면대를 점검하는 모습",
     tags: ["완도화장실날벌레", "완도배수구방역", "완도상가방역"],
     topic: "화장실 배수구 날벌레",
@@ -183,7 +183,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 어린이집·학원 소독, 교구와 화장실 관리 기준",
     excerpt:
       "완도 어린이집과 학원은 교구, 책상, 문손잡이, 화장실, 간식 공간처럼 아이들이 자주 만지는 지점을 중심으로 소독 범위를 정해야 합니다.",
-    image: "/images/columns/school-classroom-disinfection.jpg",
+    image: "/images/columns/regional-classroom-desk-disinfection.jpg",
     imageAlt: "완도 어린이집과 학원 소독을 위해 교실 책상을 관리하는 모습",
     tags: ["완도어린이집소독", "완도학원소독", "완도교육시설방역"],
     topic: "교육시설 소독",
@@ -199,7 +199,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 카페 초파리 방역, 배수구와 과일 보관대가 의심될 때",
     excerpt:
       "해남 카페에서 초파리와 날벌레가 반복된다면 배수구 유기물, 과일·시럽 보관, 음료 제조대 하부, 쓰레기통 위치를 함께 확인해야 합니다.",
-    image: "/images/columns/cafe-drain-fruitfly-inspection.jpg",
+    image: "/images/columns/regional-cafe-syrup-drain-check.jpg",
     imageAlt: "해남 카페 초파리 방역을 위해 음료 제조대와 배수구를 점검하는 모습",
     tags: ["해남카페방역", "해남초파리방역", "해남배수구날벌레"],
     topic: "카페 초파리 반복",
@@ -215,7 +215,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 숙박업소 소독, 객실과 공용공간 위생관리 기준",
     excerpt:
       "해남 숙박업소 소독은 객실 침대 주변, 문손잡이, 스위치, 화장실, 공용 복도처럼 고객이 반복 접촉하는 지점을 기준으로 진행해야 합니다.",
-    image: "/images/columns/lodging-bedbug-room-check.jpg",
+    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
     imageAlt: "해남 숙박업소 소독을 위해 객실 침대 주변을 확인하는 모습",
     tags: ["해남숙박업소소독", "해남모텔방역", "해남펜션방역"],
     topic: "객실 접촉면 소독",
@@ -247,7 +247,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 어린이집·학원 소독, 아이들 접촉면을 관리해야 할 때",
     excerpt:
       "해남 어린이집과 학원 소독은 책상, 교구, 문손잡이, 화장실, 급식·간식 공간처럼 아이들이 자주 만지는 곳을 기준으로 봐야 합니다.",
-    image: "/images/columns/school-classroom-disinfection.jpg",
+    image: "/images/columns/regional-classroom-desk-disinfection.jpg",
     imageAlt: "해남 어린이집과 학원 소독을 위해 교실 접촉면을 관리하는 모습",
     tags: ["해남어린이집소독", "해남학원소독", "해남교육시설방역"],
     topic: "교육시설 접촉면 관리",
@@ -263,7 +263,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 사무실 소독, 회의실과 탕비실 위생관리 기준",
     excerpt:
       "해남 사무실 소독은 회의실, 출입문 손잡이, 탕비실, 냉장고 손잡이, 화장실처럼 직원이 반복 접촉하는 지점을 중심으로 봐야 합니다.",
-    image: "/images/columns/office-touchpoint-disinfection.jpg",
+    image: "/images/columns/regional-office-meeting-disinfection.jpg",
     imageAlt: "해남 사무실 소독을 위해 회의실 테이블 접촉면을 닦는 모습",
     tags: ["해남사무실소독", "해남사무실방역", "해남소독업체"],
     topic: "사무실 공용공간 소독",
@@ -375,7 +375,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "대덕읍 공장 소독, 작업장과 휴게실 위생관리 기준",
     excerpt:
       "대덕읍 공장과 작업장 소독은 생산 구역, 휴게실, 화장실, 출입문 손잡이처럼 직원이 반복 접촉하는 공간을 나누어 봐야 합니다.",
-    image: "/images/columns/factory-warehouse-pest-inspection.jpg",
+    image: "/images/columns/regional-factory-loadingdock-check.jpg",
     imageAlt: "대덕읍 공장 소독을 위해 작업장 출입구를 점검하는 모습",
     tags: ["대덕읍공장소독", "대덕읍공장방역", "대덕읍작업장소독"],
     topic: "공장 접촉면 소독",
@@ -391,7 +391,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도읍 식당 바퀴벌레 방역, 주방과 냉장 설비 뒤가 의심될 때",
     excerpt:
       "완도읍 식당에서 바퀴벌레가 보이면 주방 하부, 냉장 설비 뒤, 배수구, 박스 반입 공간, 쓰레기 보관 위치를 함께 확인해야 합니다.",
-    image: "/images/columns/restaurant-cockroach-inspection.jpg",
+    image: "/images/columns/regional-seafood-drain-hygiene-check.jpg",
     imageAlt: "완도읍 식당 바퀴벌레 방역을 위해 냉장 설비 뒤를 점검하는 모습",
     tags: ["완도읍식당방역", "완도읍바퀴벌레", "완도읍주방방역"],
     topic: "식당 바퀴벌레",
@@ -407,7 +407,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도읍 물탱크청소, 상가와 숙박시설 저수조 관리 기준",
     excerpt:
       "완도읍 상가와 숙박시설 물탱크청소는 내부 침전물, 벽면 물때, 단수 시간, 이용객 동선을 함께 고려해야 합니다.",
-    image: "/images/columns/rooftop-water-tank-inspection.jpg",
+    image: "/images/columns/regional-coastal-water-tank-check.jpg",
     imageAlt: "완도읍 물탱크청소를 위해 옥상 저수조를 확인하는 모습",
     tags: ["완도읍물탱크청소", "완도읍저수조청소", "완도읍숙박시설물탱크"],
     topic: "숙박시설 물탱크청소",
@@ -423,7 +423,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "노화읍 펜션 빈대 방역, 객실 침대 주변 흔적이 걱정될 때",
     excerpt:
       "노화읍 펜션과 숙박업소에서 빈대 의심 흔적이 보이면 침대 매트리스, 헤드보드, 콘센트 주변, 세탁 동선까지 함께 확인해야 합니다.",
-    image: "/images/columns/lodging-bedbug-room-check.jpg",
+    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
     imageAlt: "노화읍 펜션 빈대 방역을 위해 침대 매트리스 주변을 확인하는 모습",
     tags: ["노화읍펜션빈대", "노화읍빈대방역", "노화읍숙박업소방역"],
     topic: "빈대 의심 흔적",
@@ -439,7 +439,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "노화읍 식당 쥐방제, 창고와 주방에 배설물이 보일 때",
     excerpt:
       "노화읍 식당에서 쥐 배설물이나 갉은 흔적이 보이면 창고 적재물, 주방 출입문 하부, 음식물 쓰레기, 외부 틈을 함께 봐야 합니다.",
-    image: "/images/home/premium-rodent-control.png",
+    image: "/images/columns/house-attic-rodent-inspection.jpg",
     imageAlt: "노화읍 식당 쥐방제를 위해 창고와 출입문 하부를 점검하는 모습",
     tags: ["노화읍식당쥐방제", "노화읍쥐방제", "노화읍음식점방역"],
     topic: "식당 쥐 흔적",
@@ -471,7 +471,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "금일읍 카페 날벌레 방역, 출입문과 배수구에서 반복될 때",
     excerpt:
       "금일읍 카페와 매장에서 날벌레가 반복된다면 출입문, 실외 조명, 배수구, 음료 제조대, 쓰레기 보관 위치를 함께 확인해야 합니다.",
-    image: "/images/columns/restroom-drain-sanitation-check.jpg",
+    image: "/images/columns/regional-restaurant-doorway-fly-check.jpg",
     imageAlt: "금일읍 카페 날벌레 방역을 위해 배수구와 출입문 주변을 확인하는 모습",
     tags: ["금일읍카페방역", "금일읍날벌레방역", "금일읍배수구방역"],
     topic: "카페 날벌레",
@@ -519,7 +519,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "송지면 펜션 소독, 객실과 공용공간 관리가 필요할 때",
     excerpt:
       "송지면 펜션과 숙박업소 소독은 객실 침대 주변, 문손잡이, 화장실, 공용 복도, 바비큐 공간처럼 이용객 동선을 나누어 봐야 합니다.",
-    image: "/images/columns/lodging-bedbug-room-check.jpg",
+    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
     imageAlt: "송지면 펜션 소독을 위해 객실과 공용공간을 확인하는 모습",
     tags: ["송지면펜션소독", "송지면숙박업소방역", "송지면소독업체"],
     topic: "펜션 객실 소독",
@@ -551,7 +551,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "화원면 물탱크청소, 건물 저수조 내부 상태가 걱정될 때",
     excerpt:
       "화원면 건물과 시설 물탱크청소는 내부 침전물, 벽면 물때, 뚜껑 밀폐, 단수 가능 시간, 작업 기록을 기준으로 확인해야 합니다.",
-    image: "/images/columns/rooftop-water-tank-inspection.jpg",
+    image: "/images/columns/regional-coastal-water-tank-check.jpg",
     imageAlt: "화원면 물탱크청소를 위해 저수조 내부 상태를 확인하는 모습",
     tags: ["화원면물탱크청소", "화원면저수조청소", "화원면건물물탱크"],
     topic: "건물 물탱크청소",
@@ -567,7 +567,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "화원면 식당 바퀴벌레 방역, 배수구와 주방 하부가 의심될 때",
     excerpt:
       "화원면 식당에서 바퀴벌레가 보이면 배수구, 주방 하부, 냉장 설비 뒤, 박스 보관 공간, 음식물 쓰레기 위치를 함께 확인해야 합니다.",
-    image: "/images/columns/restaurant-cockroach-inspection.jpg",
+    image: "/images/columns/regional-restaurant-fridge-gap-inspection.jpg",
     imageAlt: "화원면 식당 바퀴벌레 방역을 위해 배수구와 주방 하부를 확인하는 모습",
     tags: ["화원면식당바퀴벌레", "화원면식당방역", "화원면주방방역"],
     topic: "식당 바퀴벌레",
@@ -583,7 +583,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 소독업체, 상가와 시설 접촉면 관리가 필요할 때",
     excerpt:
       "장흥에서 소독업체를 찾는다면 손잡이, 테이블, 계산대, 화장실, 공용 비품처럼 이용자가 반복 접촉하는 지점을 기준으로 작업 범위를 정해야 합니다.",
-    image: "/images/columns/office-touchpoint-disinfection.jpg",
+    image: "/images/columns/regional-office-meeting-disinfection.jpg",
     imageAlt: "장흥 소독업체가 상가와 시설 접촉면을 소독하는 모습",
     tags: ["장흥소독업체", "장흥소독", "장흥시설방역"],
     topic: "상가와 시설 소독",
@@ -599,7 +599,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 쥐방제, 배설물과 갉은 흔적이 보일 때",
     excerpt:
       "장흥 주택, 상가, 창고에서 쥐 배설물이나 갉은 흔적이 보이면 포획보다 출입문 하부, 배관 틈, 먹이원, 적재물 뒤를 먼저 확인해야 합니다.",
-    image: "/images/home/premium-rodent-control.png",
+    image: "/images/columns/regional-house-exterior-rodent-entry.jpg",
     imageAlt: "장흥 쥐방제를 위해 출입문 하부와 창고 주변 흔적을 확인하는 모습",
     tags: ["장흥쥐방제", "장흥쥐퇴치", "장흥쥐방역"],
     topic: "쥐 배설물과 갉은 흔적",
@@ -615,7 +615,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 날벌레 방역, 배수구와 출입문 주변에서 반복될 때",
     excerpt:
       "장흥 상가와 식당에서 날벌레가 반복된다면 배수구, 실외 조명, 출입문, 음식물 쓰레기, 물 고임 위치를 함께 확인해야 합니다.",
-    image: "/images/columns/restroom-drain-sanitation-check.jpg",
+    image: "/images/columns/regional-restaurant-doorway-fly-check.jpg",
     imageAlt: "장흥 날벌레 방역을 위해 배수구와 세면대 주변을 점검하는 모습",
     tags: ["장흥날벌레방역", "장흥배수구방역", "장흥모기파리방역"],
     topic: "배수구와 출입문 날벌레",
@@ -631,7 +631,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 바퀴벌레 방역, 주방과 배수구에서 한 마리 보였을 때",
     excerpt:
       "완도 식당, 상가, 주택에서 바퀴벌레가 보이면 주방 하부, 배수구, 냉장 설비 뒤, 박스 보관 위치, 출입문 하부를 함께 확인해야 합니다.",
-    image: "/images/columns/restaurant-cockroach-inspection.jpg",
+    image: "/images/columns/regional-apartment-sink-cockroach-check.jpg",
     imageAlt: "완도 바퀴벌레 방역을 위해 주방 하부와 배수구를 점검하는 모습",
     tags: ["완도바퀴벌레", "완도바퀴벌레방역", "완도해충방제"],
     topic: "바퀴벌레 은신처와 유입 경로",
@@ -647,7 +647,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 쥐방제, 배설물과 갉은 흔적이 보일 때",
     excerpt:
       "완도 식당, 창고, 상가에서 쥐 배설물이나 갉은 흔적이 보이면 포획보다 출입문 하부, 외벽 틈, 음식물 보관, 창고 적재물을 먼저 확인해야 합니다.",
-    image: "/images/home/premium-rodent-control.png",
+    image: "/images/columns/regional-house-exterior-rodent-entry.jpg",
     imageAlt: "완도 쥐방제를 위해 창고와 외벽 유입 경로를 확인하는 모습",
     tags: ["완도쥐방제", "완도쥐퇴치", "완도쥐방역"],
     topic: "쥐 배설물과 유입 경로",
@@ -663,7 +663,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 날벌레 방역, 배수구와 바닷가 매장 출입문에서 반복될 때",
     excerpt:
       "완도 상가, 식당, 카페에서 날벌레가 반복된다면 배수구, 출입문, 외부 조명, 음식물 쓰레기, 물 고임을 함께 확인해야 합니다.",
-    image: "/images/columns/restroom-drain-sanitation-check.jpg",
+    image: "/images/columns/regional-restroom-floor-drain-check.jpg",
     imageAlt: "완도 날벌레 방역을 위해 배수구와 출입문 주변을 확인하는 모습",
     tags: ["완도날벌레방역", "완도배수구방역", "완도모기파리방역"],
     topic: "배수구와 외부 유입 날벌레",
@@ -679,7 +679,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 소독업체, 상가와 사무실 접촉면 관리가 필요할 때",
     excerpt:
       "해남에서 소독업체를 찾는다면 손잡이, 테이블, 계산대, 회의실, 화장실처럼 이용자와 직원이 반복 접촉하는 지점을 기준으로 봐야 합니다.",
-    image: "/images/columns/office-touchpoint-disinfection.jpg",
+    image: "/images/columns/regional-office-meeting-disinfection.jpg",
     imageAlt: "해남 소독업체가 상가와 사무실 접촉면을 소독하는 모습",
     tags: ["해남소독업체", "해남소독", "해남시설방역"],
     topic: "상가와 사무실 소독",
@@ -695,7 +695,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 바퀴벌레 방역, 주방과 배수구에서 반복될 때",
     excerpt:
       "해남 식당, 상가, 주택에서 바퀴벌레가 반복된다면 주방 하부, 배수구, 냉장 설비 뒤, 박스 보관 공간, 현관·출입문 하부를 함께 봐야 합니다.",
-    image: "/images/columns/apartment-cockroach-kitchen-check.jpg",
+    image: "/images/columns/regional-apartment-sink-cockroach-check.jpg",
     imageAlt: "해남 바퀴벌레 방역을 위해 주방 하부와 배수구를 확인하는 모습",
     tags: ["해남바퀴벌레", "해남바퀴벌레방역", "해남해충방제"],
     topic: "바퀴벌레 은신처와 반복 원인",
@@ -727,7 +727,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 날벌레 방역, 배수구와 조명 주변에서 반복될 때",
     excerpt:
       "해남 상가, 식당, 카페에서 날벌레가 반복된다면 배수구, 물 고임, 외부 조명, 출입문, 음식물 쓰레기 보관 위치를 함께 확인해야 합니다.",
-    image: "/images/columns/restroom-drain-sanitation-check.jpg",
+    image: "/images/columns/regional-restroom-floor-drain-check.jpg",
     imageAlt: "해남 날벌레 방역을 위해 배수구와 조명 주변을 점검하는 모습",
     tags: ["해남날벌레방역", "해남배수구방역", "해남모기파리방역"],
     topic: "배수구와 조명 주변 날벌레",
