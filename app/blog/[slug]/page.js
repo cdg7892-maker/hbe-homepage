@@ -161,7 +161,7 @@ export default async function BlogDetailPage({ params }) {
                 <div className="mt-6 grid gap-3">
                   {persuasion.worries.map((item) => (
                     <p key={item} className="rounded-[8px] bg-white/10 p-4 text-[18px] font-extrabold leading-relaxed text-white">
-                      "{item}"
+                      {item}
                     </p>
                   ))}
                 </div>
@@ -195,7 +195,7 @@ export default async function BlogDetailPage({ params }) {
                 <div className="mt-6 grid gap-4">
                   {persuasion.objections.map((item) => (
                     <div key={item.concern} className="rounded-[8px] border border-hairline bg-offwhite p-5">
-                      <h3 className="text-[19px] font-extrabold text-deep">"{item.concern}"</h3>
+                      <h3 className="text-[19px] font-extrabold text-deep">{item.concern}</h3>
                       <p className="mt-3 text-[15.5px] leading-[1.85] text-body3">{item.answer}</p>
                     </div>
                   ))}
