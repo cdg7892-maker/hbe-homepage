@@ -1,4 +1,6 @@
-export const COLUMN_CATEGORIES = ["전체", "강진 로컬", "업종별 방역", "해충 관리", "매장 위생", "방역 소독", "물탱크 위생", "계절 방제"]
+import { REGIONAL_COLUMN_DATA } from "./regional-column-data.js"
+
+export const COLUMN_CATEGORIES = ["전체", "강진 로컬", "전남권 로컬", "업종별 방역", "해충 관리", "매장 위생", "방역 소독", "물탱크 위생", "계절 방제"]
 
 const RAW_COLUMN_DATA = [
   {
@@ -3375,9 +3377,9 @@ const FAQ_LIBRARY = {
   ],
   local: [
     {
-      question: "강진군 읍·면 지역도 상담이 가능한가요?",
+      question: "강진·장흥·완도·해남권도 상담이 가능한가요?",
       answer:
-        "강진읍을 중심으로 마량면, 군동면, 칠량면, 대구면, 도암면, 성전면, 병영면 등 강진군 지역 상담이 가능합니다. 일정은 위치와 작업 범위에 따라 조율됩니다.",
+        "강진을 중심으로 장흥, 완도, 해남권 현장 상담을 안내합니다. 일정은 위치, 이동 조건, 작업 범위에 따라 조율됩니다.",
     },
     {
       question: "지역이 멀면 출장비가 따로 생기나요?",
@@ -3399,7 +3401,7 @@ function getFaqTopic(column) {
   if (text.includes("바퀴벌레")) return "roach"
   if (text.includes("식당") || text.includes("음식점") || text.includes("카페")) return "restaurant"
   if (text.includes("소독") || text.includes("어린이집") || text.includes("학원") || text.includes("숙박")) return "disinfection"
-  if (text.includes("강진") || text.includes("면") || text.includes("읍")) return "local"
+  if (text.includes("강진") || text.includes("장흥") || text.includes("완도") || text.includes("해남") || text.includes("전남") || text.includes("면") || text.includes("읍")) return "local"
   return "disinfection"
 }
 
@@ -3535,9 +3537,9 @@ const OBJECTION_HANDLING = [
       "해충과 위생 문제는 외부 유입과 관리 환경의 영향을 받습니다. 그래서 작업 후 물기, 음식물, 박스, 틈새, 환기, 재점검 포인트를 함께 안내해 재발 조건을 줄이는 방향으로 관리합니다.",
   },
   {
-    concern: "진짜 강진까지 오나?",
+    concern: "진짜 우리 지역까지 오나?",
     answer:
-      "한국방역환경은 강진군을 중심으로 상담합니다. 문의 시 읍·면명, 공간 용도, 발생 위치, 방문 가능 시간을 알려주시면 일정과 필요한 범위를 안내합니다.",
+      "한국방역환경은 강진·장흥·완도·해남권을 중심으로 상담합니다. 문의 시 지역명, 읍·면명, 공간 용도, 발생 위치, 방문 가능 시간을 알려주시면 일정과 필요한 범위를 안내합니다.",
   },
 ]
 
@@ -3723,7 +3725,7 @@ const CARE_PROGRAM = {
     ],
   },
   local: {
-    solutionTitle: "강진군 현장 상담을 정확하게 만드는 핵심 원리",
+    solutionTitle: "전남 남부권 현장 상담을 정확하게 만드는 핵심 원리",
     solutionIntro: "지역명보다 공간 용도, 발생 위치, 반복 여부를 먼저 확인해야 합니다.",
     coreSolutions: [
       ["지역과 공간 확인", "읍·면명과 실제 공간 용도를 함께 봅니다."],
@@ -3815,7 +3817,7 @@ function withExpandedFaqs(column) {
   }
 }
 
-export const COLUMN_DATA = RAW_COLUMN_DATA.map(withExpandedFaqs)
+export const COLUMN_DATA = [...RAW_COLUMN_DATA, ...REGIONAL_COLUMN_DATA].map(withExpandedFaqs)
 
 export function getColumnBySlug(slug) {
   return COLUMN_DATA.find((column) => column.slug === slug)
