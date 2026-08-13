@@ -16,8 +16,9 @@ const pretendard = localFont({
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
+  applicationName: SITE.companyName,
   title: {
-    default: `${SITE.companyName} | 강진군 방역·해충방제 전문업체`,
+    default: SITE.companyName,
     template: `%s | ${SITE.companyName}`,
   },
   description:
@@ -36,8 +37,11 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.companyName} | 강진군 방역·해충방제 전문업체`,
+    title: SITE.companyName,
     description: "이웃처럼 빠른 출동, 안심 약제. 강진군 주민이 먼저 찾는 방역업체.",
+  },
+  appleWebApp: {
+    title: SITE.companyName,
   },
 }
 
