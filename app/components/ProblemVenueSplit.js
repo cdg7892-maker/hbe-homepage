@@ -7,6 +7,7 @@ const featuredServices = [
   { label: "바퀴벌레 박멸", image: "/images/home/premium-kitchen-inspection.png", href: "/services/roach" },
   { label: "쥐 방제", image: "/images/home/premium-rodent-control.png", href: "/services/rat" },
   { label: "공간 소독", image: "/images/home/premium-disinfection-service.png", href: "/services/disinfection" },
+  { label: "매트리스 청소", image: "/images/home/home-bedroom-inspection.png", href: "/services/mattress" },
   { label: "물탱크 청소", image: "/images/home/premium-water-tank-service.png", href: "/services/water-tank" },
 ]
 
@@ -20,13 +21,13 @@ export default function ProblemVenueSplit() {
             <h2 className="text-[31px] font-extrabold leading-[1.3] tracking-[-0.02em] md:text-[42px]">
               지금 필요한 방역을
               <br />
-              바로 찾아보세요.
+              바로 찾아보세요
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-white/74">
               대표 서비스부터 현장 맞춤 관리까지, 증상에 맞는 상담으로 연결합니다.
             </p>
 
-            <div className="mt-9 grid grid-cols-2 gap-3">
+            <div className="mt-9 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {featuredServices.map((service) => (
                 <Link key={service.label} href={service.href} className="group overflow-hidden rounded-[8px] border border-white/24 bg-white/10">
                   <div className="relative aspect-[4/3]">
@@ -34,7 +35,7 @@ export default function ProblemVenueSplit() {
                       src={service.image}
                       alt={`${service.label} 현장 서비스 사진`}
                       fill
-                      sizes="260px"
+                      sizes="(min-width: 640px) 170px, 45vw"
                       className="object-cover transition group-hover:scale-105"
                     />
                   </div>
@@ -69,7 +70,7 @@ export default function ProblemVenueSplit() {
               방역이 필요한가요?
             </h2>
             <p className="mt-5 text-right text-[15px] leading-relaxed text-white/60">
-              가정, 외식매장, 창고, 공공시설까지 공간별 위생 기준에 맞춰 제안합니다.
+              가정, 음식점, 매장, 창고, 공공시설까지 공간별 위생 기준에 맞춰 제안합니다.
             </p>
             <div className="mt-9 grid grid-cols-2 border border-white/25 sm:grid-cols-3">
               {VENUES.map((v) => {
