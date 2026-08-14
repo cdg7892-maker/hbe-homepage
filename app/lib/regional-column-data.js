@@ -77,7 +77,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/apartment-cockroach-kitchen-check.jpg",
+    image: "/images/columns/regional-restaurant-fridge-gap-inspection.jpg",
     imageAlt: "장흥 바퀴벌레 방역을 위해 주방 하부와 배수구 주변을 확인하는 모습",
     tags: ["장흥바퀴벌레", "장흥바퀴벌레방역", "장흥상가방역"],
     summary: [
@@ -141,7 +141,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/restaurant-cockroach-inspection.jpg",
+    image: "/images/columns/premium-restaurant-kitchen-cockroach-inspection.png",
     imageAlt: "장흥 식당 방역을 위해 주방 하부와 배수구를 점검하는 모습",
     tags: ["장흥식당방역", "장흥음식점방역", "장흥주방방역"],
     summary: [
@@ -208,7 +208,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/rooftop-water-tank-inspection.jpg",
+    image: "/images/columns/premium-rooftop-water-tank-inspection.png",
     imageAlt: "장흥 물탱크청소를 위해 옥상 저수조 상태를 확인하는 모습",
     tags: ["장흥물탱크청소", "장흥저수조청소", "장흥상가물탱크"],
     summary: [
@@ -271,7 +271,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/home/premium-consultation.png",
+    image: "/images/columns/premium-field-consultation-plan.png",
     imageAlt: "완도 방역업체 상담을 위해 공간별 문제와 작업 범위를 안내하는 모습",
     tags: ["완도방역업체", "완도바퀴벌레퇴치", "완도해충방제"],
     summary: [
@@ -335,7 +335,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/premium-lodging-mattress-uv-cleaning.png",
     imageAlt: "완도 숙박업소 방역을 위해 객실 침대 주변을 점검하는 모습",
     tags: ["완도숙박업소방역", "완도펜션방역", "완도빈대방역"],
     summary: [
@@ -527,7 +527,7 @@ const FIRST_REGIONAL_COLUMN_DATA = [
     author: "한국방역환경",
     date: "2026. 8. 13.",
     readTime: "8분",
-    image: "/images/home/hero-science-dispatch.png",
+    image: "/images/columns/premium-field-consultation-plan.png",
     imageAlt: "해남 방역업체 상담을 위해 현장 위치와 문제 범위를 확인하는 모습",
     tags: ["해남방역업체", "해남방역", "해남소독업체"],
     summary: [

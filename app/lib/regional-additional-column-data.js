@@ -23,7 +23,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 숙박업소 소독, 객실과 화장실 위생이 걱정될 때",
     excerpt:
       "장흥 모텔, 펜션, 숙박업소는 객실 접촉면, 침구 주변, 화장실 배수구, 공용 공간을 나누어 소독과 방역 범위를 정해야 합니다.",
-    image: "/images/columns/lodging-bedbug-room-check.jpg",
+    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
     imageAlt: "장흥 숙박업소 소독을 위해 객실 침대 주변과 접촉면을 확인하는 모습",
     tags: ["장흥숙박업소소독", "장흥모텔방역", "장흥펜션방역"],
     topic: "객실 소독과 벌레 흔적",
@@ -119,7 +119,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 펜션 빈대 방역, 침대 주변 흔적이 걱정될 때",
     excerpt:
       "완도 펜션에서 빈대 의심 흔적이나 객실 벌레가 보이면 침대, 헤드보드, 콘센트 주변, 짐 보관 위치, 세탁 동선을 함께 확인해야 합니다.",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/premium-lodging-mattress-uv-cleaning.png",
     imageAlt: "완도 펜션 빈대 방역을 위해 침대와 헤드보드 주변을 점검하는 모습",
     tags: ["완도펜션빈대", "완도빈대방역", "완도숙박업소방역"],
     topic: "빈대 의심 흔적",
@@ -167,7 +167,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 소독업체, 상가와 시설 접촉면 관리가 필요할 때",
     excerpt:
       "완도 상가와 시설 소독은 손잡이, 계산대, 테이블, 화장실, 공용 비품처럼 이용자가 반복 접촉하는 표면을 기준으로 작업 범위를 정해야 합니다.",
-    image: "/images/columns/office-touchpoint-disinfection.jpg",
+    image: "/images/columns/regional-office-meeting-disinfection.jpg",
     imageAlt: "완도 소독업체가 상가 접촉면을 소독하는 모습",
     tags: ["완도소독업체", "완도소독", "완도시설방역"],
     topic: "상가와 시설 소독",
@@ -295,7 +295,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥읍 식당 바퀴벌레 방역, 주방 하부에서 보였을 때",
     excerpt:
       "장흥읍 식당에서 바퀴벌레가 주방 하부나 배수구 주변에 보이면 냉장 설비 뒤, 박스 창고, 음식물 쓰레기 보관 위치까지 함께 확인해야 합니다.",
-    image: "/images/columns/restaurant-cockroach-inspection.jpg",
+    image: "/images/columns/regional-restaurant-fridge-gap-inspection.jpg",
     imageAlt: "장흥읍 식당 바퀴벌레 방역을 위해 주방 하부를 점검하는 모습",
     tags: ["장흥읍식당방역", "장흥읍바퀴벌레", "장흥읍주방방역"],
     topic: "식당 바퀴벌레",
@@ -359,7 +359,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "대덕읍 창고 쥐방제, 포대와 적재물 사이 흔적이 보일 때",
     excerpt:
       "대덕읍 창고에서 포대가 갉히거나 배설물이 보이면 출입문 하부, 벽면 틈, 적재물 뒤, 사료·식재료 보관 상태를 함께 확인해야 합니다.",
-    image: "/images/columns/house-attic-rodent-inspection.jpg",
+    image: "/images/columns/regional-factory-loadingdock-check.jpg",
     imageAlt: "대덕읍 창고 쥐방제를 위해 적재물 주변을 확인하는 모습",
     tags: ["대덕읍쥐방제", "대덕읍창고방역", "대덕읍쥐퇴치"],
     topic: "창고 쥐 흔적",
@@ -423,7 +423,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "노화읍 펜션 빈대 방역, 객실 침대 주변 흔적이 걱정될 때",
     excerpt:
       "노화읍 펜션과 숙박업소에서 빈대 의심 흔적이 보이면 침대 매트리스, 헤드보드, 콘센트 주변, 세탁 동선까지 함께 확인해야 합니다.",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/premium-lodging-mattress-uv-cleaning.png",
     imageAlt: "노화읍 펜션 빈대 방역을 위해 침대 매트리스 주변을 확인하는 모습",
     tags: ["노화읍펜션빈대", "노화읍빈대방역", "노화읍숙박업소방역"],
     topic: "빈대 의심 흔적",
@@ -455,7 +455,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "금일읍 상가 소독, 고객 접촉면 위생관리가 필요할 때",
     excerpt:
       "금일읍 상가와 시설 소독은 출입문 손잡이, 계산대, 테이블, 화장실, 공용 비품처럼 고객이 반복 접촉하는 지점을 기준으로 봐야 합니다.",
-    image: "/images/columns/office-touchpoint-disinfection.jpg",
+    image: "/images/columns/regional-cafe-syrup-drain-check.jpg",
     imageAlt: "금일읍 상가 소독을 위해 고객 접촉면을 관리하는 모습",
     tags: ["금일읍상가소독", "금일읍소독업체", "금일읍시설방역"],
     topic: "상가 접촉면 소독",
@@ -503,7 +503,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남읍 식당 방역, 주방 벌레와 홀 위생이 걱정될 때",
     excerpt:
       "해남읍 식당에서 바퀴벌레, 파리, 초파리, 쥐 흔적이 보이면 주방, 홀, 창고, 출입문, 배수구를 나누어 확인해야 합니다.",
-    image: "/images/columns/restaurant-doorway-pest-check.jpg",
+    image: "/images/columns/premium-restaurant-kitchen-cockroach-inspection.png",
     imageAlt: "해남읍 식당 방역을 위해 주방과 홀 동선을 점검하는 모습",
     tags: ["해남읍식당방역", "해남읍음식점방역", "해남읍주방방역"],
     topic: "식당 해충과 위생",
@@ -519,7 +519,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "송지면 펜션 소독, 객실과 공용공간 관리가 필요할 때",
     excerpt:
       "송지면 펜션과 숙박업소 소독은 객실 침대 주변, 문손잡이, 화장실, 공용 복도, 바비큐 공간처럼 이용객 동선을 나누어 봐야 합니다.",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/mokpo-wave2-lodging-cockroach-kitchenette.jpg",
     imageAlt: "송지면 펜션 소독을 위해 객실과 공용공간을 확인하는 모습",
     tags: ["송지면펜션소독", "송지면숙박업소방역", "송지면소독업체"],
     topic: "펜션 객실 소독",
@@ -535,7 +535,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "송지면 창고 쥐방제, 농가 포대와 사료가 갉혔을 때",
     excerpt:
       "송지면 농가 창고에서 포대와 사료가 갉히거나 배설물이 보이면 출입문 하부, 벽면 틈, 적재물 뒤, 먹이원 보관 상태를 확인해야 합니다.",
-    image: "/images/columns/house-attic-rodent-inspection.jpg",
+    image: "/images/columns/regional-factory-loadingdock-check.jpg",
     imageAlt: "송지면 농가 창고 쥐방제를 위해 포대와 적재물 주변을 확인하는 모습",
     tags: ["송지면쥐방제", "송지면창고방역", "송지면농가쥐"],
     topic: "농가 창고 쥐 흔적",
@@ -583,7 +583,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 소독업체, 상가와 시설 접촉면 관리가 필요할 때",
     excerpt:
       "장흥에서 소독업체를 찾는다면 손잡이, 테이블, 계산대, 화장실, 공용 비품처럼 이용자가 반복 접촉하는 지점을 기준으로 작업 범위를 정해야 합니다.",
-    image: "/images/columns/regional-office-meeting-disinfection.jpg",
+    image: "/images/columns/premium-office-shared-space-disinfection.png",
     imageAlt: "장흥 소독업체가 상가와 시설 접촉면을 소독하는 모습",
     tags: ["장흥소독업체", "장흥소독", "장흥시설방역"],
     topic: "상가와 시설 소독",
@@ -599,7 +599,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 쥐방제, 배설물과 갉은 흔적이 보일 때",
     excerpt:
       "장흥 주택, 상가, 창고에서 쥐 배설물이나 갉은 흔적이 보이면 포획보다 출입문 하부, 배관 틈, 먹이원, 적재물 뒤를 먼저 확인해야 합니다.",
-    image: "/images/columns/regional-house-exterior-rodent-entry.jpg",
+    image: "/images/columns/house-attic-rodent-inspection.jpg",
     imageAlt: "장흥 쥐방제를 위해 출입문 하부와 창고 주변 흔적을 확인하는 모습",
     tags: ["장흥쥐방제", "장흥쥐퇴치", "장흥쥐방역"],
     topic: "쥐 배설물과 갉은 흔적",
@@ -647,7 +647,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 쥐방제, 배설물과 갉은 흔적이 보일 때",
     excerpt:
       "완도 식당, 창고, 상가에서 쥐 배설물이나 갉은 흔적이 보이면 포획보다 출입문 하부, 외벽 틈, 음식물 보관, 창고 적재물을 먼저 확인해야 합니다.",
-    image: "/images/columns/regional-house-exterior-rodent-entry.jpg",
+    image: "/images/home/premium-rodent-control.png",
     imageAlt: "완도 쥐방제를 위해 창고와 외벽 유입 경로를 확인하는 모습",
     tags: ["완도쥐방제", "완도쥐퇴치", "완도쥐방역"],
     topic: "쥐 배설물과 유입 경로",
@@ -679,7 +679,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 소독업체, 상가와 사무실 접촉면 관리가 필요할 때",
     excerpt:
       "해남에서 소독업체를 찾는다면 손잡이, 테이블, 계산대, 회의실, 화장실처럼 이용자와 직원이 반복 접촉하는 지점을 기준으로 봐야 합니다.",
-    image: "/images/columns/regional-office-meeting-disinfection.jpg",
+    image: "/images/columns/premium-office-shared-space-disinfection.png",
     imageAlt: "해남 소독업체가 상가와 사무실 접촉면을 소독하는 모습",
     tags: ["해남소독업체", "해남소독", "해남시설방역"],
     topic: "상가와 사무실 소독",
@@ -711,7 +711,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 쥐방제, 배설물과 천장 소리가 반복될 때",
     excerpt:
       "해남 창고, 식당, 주택에서 쥐 배설물이나 천장 소리가 반복된다면 출입문 하부, 배관 틈, 먹이원, 적재물 뒤를 함께 확인해야 합니다.",
-    image: "/images/columns/house-attic-rodent-inspection.jpg",
+    image: "/images/columns/regional-house-exterior-rodent-entry.jpg",
     imageAlt: "해남 쥐방제를 위해 천장과 창고 유입 경로를 확인하는 모습",
     tags: ["해남쥐방제", "해남쥐퇴치", "해남쥐방역"],
     topic: "쥐 배설물과 천장 소리",
@@ -743,7 +743,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "강진 매트리스 청소 업체, 매트리스 살균·진드기 청소 전남 한국방역환경",
     excerpt:
       "강진에서 매트리스 청소 업체를 찾는다면 가정집 침대, 아이 방, 학교 기숙사, 펜션·숙박시설 매트리스의 먼지, 냄새, 얼룩, 진드기 걱정을 함께 확인해야 합니다.",
-    image: "/images/home/home-bedroom-inspection.png",
+    image: "/images/columns/mokpo-mattress-cleaning-bedroom.jpg",
     imageAlt: "강진 매트리스 청소 업체 상담을 위해 침실 매트리스 상태를 확인하는 모습",
     tags: ["강진매트리스청소", "강진매트리스청소업체", "강진매트리스살균"],
     topic: "매트리스 먼지와 진드기 청소",
@@ -759,7 +759,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "강진 기숙사 매트리스 청소, 학교 침대 살균·진드기 청소 전남 한국방역환경",
     excerpt:
       "강진 학교 기숙사 매트리스 청소는 학기 전 입소 일정, 매트리스 수량, 층수, 작업 가능 시간, 건조 조건을 함께 확인해야 합니다.",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/mokpo-wave4-dormitory-mattress-cleaning.jpg",
     imageAlt: "강진 기숙사 매트리스 청소를 위해 침대 매트리스 상태를 점검하는 모습",
     tags: ["강진기숙사매트리스청소", "강진학교매트리스청소", "강진침대살균"],
     topic: "기숙사 매트리스 청소와 살균",
@@ -775,7 +775,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "강진 가정집 매트리스 청소, 침대 진드기·아이방 매트리스 살균 전남 한국방역환경",
     excerpt:
       "강진 가정집 매트리스 청소는 아이 방, 안방 침대, 오래된 매트리스의 먼지, 진드기 걱정, 냄새, 얼룩 상태를 기준으로 상담해야 합니다.",
-    image: "/images/home/home-bedroom-inspection.png",
+    image: "/images/columns/mokpo-wave3-child-room-mattress-cleaning.jpg",
     imageAlt: "강진 가정집 매트리스 청소를 위해 아이 방 침대 상태를 확인하는 모습",
     tags: ["강진가정집매트리스청소", "강진침대진드기청소", "강진아이방매트리스"],
     topic: "가정집 침대 진드기 청소",
@@ -791,7 +791,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "강진 숙박업소 매트리스 청소, 펜션 침대 냄새·얼룩 살균 전남 한국방역환경",
     excerpt:
       "강진 숙박업소와 펜션 매트리스 청소는 객실 냄새, 얼룩, 투숙객 민원, 객실 운영 일정, 건조 시간을 함께 고려해야 합니다.",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/premium-lodging-mattress-uv-cleaning.png",
     imageAlt: "강진 숙박업소 매트리스 청소를 위해 객실 침대 상태를 확인하는 모습",
     tags: ["강진숙박업소매트리스청소", "강진펜션매트리스청소", "강진침대냄새청소"],
     topic: "숙박업소 매트리스 냄새와 얼룩 관리",
@@ -807,7 +807,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "장흥 매트리스 청소 업체, 침대 살균·진드기 청소 전남 한국방역환경",
     excerpt:
       "장흥에서 매트리스 청소 업체를 찾는다면 가정집 침대, 기숙사, 숙박업소 매트리스의 먼지, 냄새, 얼룩, 진드기 걱정을 함께 확인해야 합니다.",
-    image: "/images/home/home-bedroom-inspection.png",
+    image: "/images/columns/mokpo-wave3-home-mattress-cleaning.jpg",
     imageAlt: "장흥 매트리스 청소 업체 상담을 위해 침대 상태를 확인하는 모습",
     tags: ["장흥매트리스청소", "장흥매트리스청소업체", "장흥침대살균"],
     topic: "매트리스 살균과 진드기 청소",
@@ -823,7 +823,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "완도 매트리스 청소 업체, 펜션 침대 살균·진드기 청소 전남 한국방역환경",
     excerpt:
       "완도 매트리스 청소는 가정집 침대뿐 아니라 펜션과 숙박업소 객실 매트리스의 냄새, 얼룩, 먼지, 진드기 걱정을 함께 확인해야 합니다.",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/mokpo-wave2-pension-mattress-coastal-room.jpg",
     imageAlt: "완도 펜션 매트리스 청소를 위해 객실 침대 상태를 점검하는 모습",
     tags: ["완도매트리스청소", "완도펜션매트리스청소", "완도침대살균"],
     topic: "펜션 매트리스 청소와 살균",
@@ -839,7 +839,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 매트리스 청소 업체, 침대 진드기·매트리스 살균 전남 한국방역환경",
     excerpt:
       "해남에서 매트리스 청소 업체를 찾는다면 가정집 침대, 학교 기숙사, 숙박시설 매트리스의 진드기 걱정, 냄새, 얼룩, 먼지 상태를 함께 확인해야 합니다.",
-    image: "/images/home/home-bedroom-inspection.png",
+    image: "/images/columns/mokpo-wave3-mattress-sanitizing.jpg",
     imageAlt: "해남 매트리스 청소 업체 상담을 위해 침실 매트리스 상태를 확인하는 모습",
     tags: ["해남매트리스청소", "해남매트리스청소업체", "해남침대진드기청소"],
     topic: "침대 진드기와 매트리스 살균",
@@ -855,7 +855,7 @@ const ADDITIONAL_REGIONAL_CONFIG = [
     title: "해남 기숙사 매트리스 청소, 학교 침대 살균·다량 매트리스 전남 한국방역환경",
     excerpt:
       "해남 기숙사 매트리스 청소는 다량 매트리스 수량, 입소 전 일정, 층별 동선, 건조 시간, 학생 생활 공간 위생 기준을 함께 봐야 합니다.",
-    image: "/images/columns/regional-lodging-mattress-inspection.jpg",
+    image: "/images/columns/mokpo-wave4-school-mattress-cleaning.jpg",
     imageAlt: "해남 기숙사 매트리스 청소를 위해 다량 매트리스 상태를 점검하는 모습",
     tags: ["해남기숙사매트리스청소", "해남학교매트리스청소", "해남다량매트리스청소"],
     topic: "기숙사 다량 매트리스 청소",
